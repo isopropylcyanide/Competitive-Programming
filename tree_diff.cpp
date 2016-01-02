@@ -8,18 +8,21 @@ vector<bool> visited(MAX, false);
 vector<int> sum(MAX, 0);
 int nodes;
 
+auto lambda = [](auto x, auto y) {return x + y;};
+
 int dfs(int node, vector< vector<int> > & graph){
     int ret = 0;
     visited[node] = true;
 
-    for (int i = 0; i < graph[node].size(); i++){
+    for (int i = 0; i < signed(graph[node].size()); i++){
         int next = graph[node][i];
         if (visited[next] == false)
             ret += dfs(next, graph);
     }
     return sum[node] = value[node] + ret;
-
 }
+
+
 int main(){
     ios::sync_with_stdio(false);
 

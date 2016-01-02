@@ -2,11 +2,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
 typedef long long llu;
 
 #define max 10000002
 #define ROOT 500
-#define gc getchar_unlocked 
+#define gc getchar_unlocked
 
  llu read_int() {
   char c = gc();
@@ -113,9 +114,9 @@ inline llu factorize(llu x){
 void solve(){
 	 llu testcases,N;
     testcases = read_int();
-     
+
     while(testcases--){
-  
+
       N = read_int();
 
       if(N<=10000){
@@ -140,18 +141,18 @@ void solve(){
 
       }
         printf("%lld\n",ans+1);
-    }  
+    }
 }
 
 
 int main(){
-    
+
     ios_base::sync_with_stdio(false);
     precompute();
 
     solve();
 
-   
+
 
     return 0;
-} 
+}

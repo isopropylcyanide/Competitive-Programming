@@ -1,8 +1,6 @@
 
-=begin
-f a sequence of numbers a1, A2, ... , AN form an arithmetic progression A, he was asked to calculate sum of F(Ai),
-for L <= i <= R. F(X) is defined as: If X < 10 then F(X) = X. Else F(X) = F(sum_of_digits(X)).	
-=end
+# f a sequence of numbers a1, A2, ... , AN form an arithmetic progression A, he was asked to calculate sum of F(Ai),
+# for L <= i <= R. F(X) is defined as: If X < 10 then F(X) = X. Else F(X) = F(sum_of_digits(X)).
 
 TAB = [[]] * 10
 TSUM = 45
@@ -17,22 +15,24 @@ TAB[7] = [7, 5, 3, 1, 8, 6, 4, 2, 9]
 TAB[8] = [8, 7, 6, 5, 4, 3, 2, 1, 9]
 TAB[9] = [9, 9, 9, 9, 9, 9, 9, 9, 9]
 
-
 t = gets.chomp.to_i
 
 t.times do
-	a1,d,l,r = gets.split(&:to_i)
-	a1,d,l,r=a1.to_i,d.to_i,l.to_i,r.to_i
+    a1, d, l, r = gets.split(&:to_i)
+    a1 = a1.to_i
+    d = d.to_i
+    l = l.to_i
+    r = r.to_i
 
-	n = r - l + 1
+    n = r - l + 1
     d = d % 9
-    a1 = a1 + d * (l - 1)
+    a1 += d * (l - 1)
 
     if d == 0
-    	puts (1 + (a1 - 1) % 9)* n
+        puts (1 + (a1 - 1) % 9) * n
 
-	elsif d==3
-		first = 1 + (a1 - 1) % 9
+    elsif d == 3
+        first = 1 + (a1 - 1) % 9
         second = 1 + (first + 3 - 1) % 9
         third = 1 + (second + 3 - 1) % 9
 
@@ -47,8 +47,8 @@ t.times do
         end
         puts ans
 
-    elsif d==6
-    	first = 1 + (a1 - 1) % 9
+    elsif d == 6
+        first = 1 + (a1 - 1) % 9
         second = 1 + (first + 6 - 1) % 9
         third = 1 + (second + 6 - 1) % 9
 
@@ -58,32 +58,32 @@ t.times do
         ans += quo * (first + second + third)
         if mod == 1
             ans += first
-        elif mod == 2
+            elif mod == 2
             ans += first + second
         end
         puts ans
-    
+
     else
-            first_in_table = 1 + (a1 - 1) % 9
+        first_in_table = 1 + (a1 - 1) % 9
 
-            first_in_table_index = TAB[d].index(first_in_table)
+        first_in_table_index = TAB[d].index(first_in_table)
 
-            if n <= 9 - first_in_table_index
-                puts TAB[d][first_in_table_index, n].inject(:+)
+        if n <= 9 - first_in_table_index
+            puts TAB[d][first_in_table_index, n].inject(:+)
 
-            else
-                ans = 0
-                offset = 9 - first_in_table_index
-                ans += (TAB[d][first_in_table_index,TAB[d].length]).inject(:+)
+        else
+            ans = 0
+            offset = 9 - first_in_table_index
+            ans += (TAB[d][first_in_table_index, TAB[d].length]).inject(:+)
 
-                n -= offset
-                mult, mod = n.divmod(9)
+            n -= offset
+            mult, mod = n.divmod(9)
 
-                ans += TSUM * mult
-                ans += (TAB[d][0,mod]).inject(:+)
+            ans += TSUM * mult
+            ans += (TAB[d][0, mod]).inject(:+)
 
-                puts ans
-            end	
+            puts ans
+        end
 
-	end
+     end
 end
