@@ -8,11 +8,10 @@ int * merge(int *a){
 	int *merged=(int*)calloc(num,sizeof(int));
 
 	for(int i(0); i<num; i++)
-		if(a[i]>0){
-			pos=i;
-			break;
+	if(a[i]>0){
+		pos=i;
+		break;
 	}
-
 	while(neg<=pos-1 && pos<num-1){
 		merged[k++]=a[neg];
 		merged[k++]=a[pos];
@@ -34,9 +33,9 @@ void quick_divide(int low,int high,int* a){
 
  if(low<high){
  	int i=low,j=high,par=0;
-	
+
 	while(i<j){
-			
+
 		while(i<=high){
 			if (a[i]<par)
 				i++;
@@ -47,9 +46,9 @@ void quick_divide(int low,int high,int* a){
 			if (a[j]>par)
 				j--;
 			else break;
-	   }	
+	   }
 		if(i>=j)return;
-		swap(a[i],a[j]);		
+		swap(a[i],a[j]);
 	}
   }
 }
