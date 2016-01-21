@@ -12,6 +12,7 @@ ostream& operator<< (ostream& os,vector<int> & arr){
     return os;
 }
 
+
 // O(n^2)
 tuple<int, int, int> bruteForcemax(const int& low, const int &high, const vector<int> & arr){
 
@@ -33,7 +34,7 @@ tuple<int, int, int> bruteForcemax(const int& low, const int &high, const vector
 }
 
  tuple<int, int, int> divideConqMaxCrossing(const int & low, const int & mid, const int & high, const vector<int> & arr){
-    // Combines the max sum subarray from low..mid and mid +1 .. high 
+    // Combines the max sum subarray from low..mid and mid +1 .. high
     // returns the indices that make up the crossing subarray and return their crossing sum
 
     int leftSum = INT_MIN, leftMax;
@@ -72,7 +73,7 @@ tuple<int, int, int> bruteForcemax(const int& low, const int &high, const vector
     if (high == low)
         return make_tuple(low, high, arr[low]);
 
-    else{   
+    else{
         int mid = (low + high)/2;
         int leftLow, leftHigh, leftSum;
         int rightLow, rightHigh, rightSum;
