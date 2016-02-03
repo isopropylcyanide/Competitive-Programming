@@ -40,6 +40,26 @@ void normal_sieve(){
     }
 }
 
+void sequenceSieve(){
+    vector<llu>prime;
+    vector<bool>V;
+    prime.resize(max);
+    V.resize(max);
+
+    for (int i = 2; i < max; i +=2)
+        prime[i] = 2;
+
+    for (int i = 3; i < max; i +=2)
+        if (!V[i]){
+            prime[i] = i;
+            for (llu j = i; (j*i) < max; j += 2){
+				if (!V[j*i]){
+                    V[j*i] = true;
+                    prime[j*i] = i;
+			    }
+            }
+        }
+}
 void precompute()
 {
     T[1] = 1;
@@ -109,6 +129,7 @@ inline llu factorize(llu x){
   	if (*si!=1)
   		ans *= 1 - 1.0/(*si);
 
+    return ans;
 }
 
 void solve(){

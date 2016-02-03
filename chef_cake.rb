@@ -8,7 +8,6 @@
 def solve(n, m)
     if n == 1 || m == n - 1 || m == 1
         puts 'Yes'
-
     elsif m == 0
         puts 'No 1'
     else

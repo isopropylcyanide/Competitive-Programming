@@ -12,8 +12,9 @@ class Calculator {
 }
 
 class Solution{
-    public static void main(String []argh)
+    public static void main(String []args)
     {
+    	Buffere
         Scanner in = new Scanner(System.in);
         int T=in.nextInt();
         while(T-->0)

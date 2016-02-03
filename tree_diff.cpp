@@ -24,7 +24,6 @@ int dfs(int node, vector<vector<int> >& graph) {
 int main() {
         ios::sync_with_stdio(false);
 
-        cout << "Hi Test\n";
         int x, y, total = 0;
         cin >> nodes;
         int high = INT_MAX;
@@ -42,7 +41,6 @@ int main() {
                 graph[x].push_back(y);
                 graph[y].push_back(x);
         }
-        cout << "In your face bitches\n";
         dfs(1, graph);
 
         for (int i = 1; i <= nodes; i++) {

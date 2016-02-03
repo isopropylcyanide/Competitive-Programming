@@ -8,6 +8,22 @@ T_C = [0] * max
 sieve = []
 
 
+def segment_sieve():
+    # Generate minimum prime for a given number
+    for i in xrange(2, MAX):
+        prime[i] = 2
+
+    for i in xrange(3, MAX, 2):
+        if V[i] == False:
+            prime[i] = i
+            j = i
+            while (j * i < MAX):
+                if V[j * i] == False:
+                    V[j * i] = True
+                    prime[j * i] = i
+                j += 2
+
+
 def precompute():
     """Fast Totient and minimum prime calculator"""
 
