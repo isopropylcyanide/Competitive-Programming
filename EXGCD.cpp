@@ -1,4 +1,6 @@
 #include <cstdio>
+#include <vector>
+using namespace std;
 
 #define MAX 10000003
 #define ROOT 500
@@ -8,8 +10,6 @@
 // Euler totient
 int phi[MAX];
 
-jj
-ddddd
 // Modular multiplication
 int mul(int a, int b){
 	return (long long)a*b%MOD;

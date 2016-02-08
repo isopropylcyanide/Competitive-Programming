@@ -1,9 +1,3 @@
-""" Chef and his best friend Aleksa are into mathematical games these days. Today, they have some ( >= 0 ) black cells
-represented as B, and a white cell represented as W, lying randomly in a straight line. They have decided to play with
-these cells. In a move, a player chooses some ( > 0 ) black cells lying on any one side of the white cell and remove
-them. It should be noted that a player is not allowed to choose black cells from both side of the given white cell. Both
-the players alternate their moves, and play optimally. The player who is unable to move in his respective turn will lose
-the game. """
 
 
 def main():
