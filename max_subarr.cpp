@@ -36,10 +36,8 @@ tuple<int, int, int> bruteForcemax(const int& low, const int &high, const vector
  tuple<int, int, int> divideConqMaxCrossing(const int & low, const int & mid, const int & high, const vector<int> & arr){
     // Combines the max sum subarray from low..mid and mid +1 .. high
     // returns the indices that make up the crossing subarray and return their crossing sum
-
     int leftSum = INT_MIN, leftMax;
     int sum = 0;
-
     //Now do the same brute force step as we did earlier
     // The arrerence lies in the fact that we are now very deep in recursion
     // at a point where this brute is the only efficient way
@@ -61,7 +59,6 @@ tuple<int, int, int> bruteForcemax(const int& low, const int &high, const vector
             rightMax = i;
         }
     }
-
     return make_tuple(leftMax, rightMax, leftSum + rightSum);
  }
 
