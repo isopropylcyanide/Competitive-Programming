@@ -3,6 +3,18 @@
 import sys
 
 
+def f(a):
+    ones, twos = 0, 0
+    for i in xrange(len(a)):
+        twos |= (ones & a[i])
+        ones ^= a[i]
+
+        cbm = ~(ones & twos)
+        ones &= cbm
+        twos &= cbm
+    return ones
+
+
 def hourGlass(a):
     maxm = -sys.maxint
     for i in xrange(len(arr) - 3 + 1):

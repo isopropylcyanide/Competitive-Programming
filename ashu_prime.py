@@ -2,7 +2,7 @@ from collections import Counter
 
 """
 Given a prime number X, you need to give the count of all numbers
- in range 1 to 106 inclusive which have minimum prime factor X.
+ in range 1 to 10**6 inclusive which have minimum prime factor X.
 """
 
 
