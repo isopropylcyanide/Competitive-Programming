@@ -8,7 +8,6 @@ llu temp;
 llu maxSum = 0, curr_max;
 int A, K;
 char query_type;
-
 // A vector to store populations of ith town
 vector <llu> pop;
 
@@ -18,7 +17,6 @@ vector <pair <pair<int, int>, bool> > road_input;
 // A vector that stores the connected components for each pair
 vector <pair<int, vector<int> > > connected;
 
-
 void display(){
     for (auto a : pop)
                 cout <<" "<<a;
@@ -27,6 +25,7 @@ void display(){
                 cout << "\nRoad: "<<a.first.first<<" - "<<a.first.second<<" Nalid: "<<a.second;
         }
 }
+
 
 void DFSUtil(int v, vector<bool> & visited, llu & mySum){
         // Mark the current node as visited and print it

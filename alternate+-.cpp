@@ -3,6 +3,7 @@ using namespace std;
 
 static int num=0;
 
+
 int * merge(int *a){
 	int neg=0,pos=0,k=0;
 	int *merged=(int*)calloc(num,sizeof(int));
@@ -17,7 +18,7 @@ int * merge(int *a){
 		merged[k++]=a[pos];
 		neg++; pos++;
 	}
-
+	
 	while(neg<=pos){
 		merged[k++]=a[neg];
 		neg++;
