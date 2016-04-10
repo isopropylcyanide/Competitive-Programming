@@ -31,6 +31,26 @@ def smallestDivisor(n):
     return 1
 
 
+def printCoins(N, X, inp):
+    # N digits, 10 1s, N-10 0s
+    print 'Case #%d:' % (inp + 1)
+
+    for i in range(N - 10):
+        for j in range(N - 10 - i):
+            for k in range(N - 10 - i - j):
+                l = N - 10 - i - j - k
+                assert l >= 0
+                template = "11{}11{}11{}11{}11"
+                output = template.format("0" * i, "0" * j, "0" * k, "0" * l)
+                factors = "3 2 5 2 7 2 3 2 11"
+                print output, factors
+                X -= 1
+                if X == 0:
+                    return
+    # If we get here, we didn't mine enough jamcoins!
+    assert False
+
+
 def jamCoins(N, J,  inp):
     gen = it.product("01", repeat=N - 2)
 
@@ -57,4 +77,4 @@ def jamCoins(N, J,  inp):
 if __name__ == '__main__':
     for i in xrange(input()):
         N, J = map(int, raw_input().split())
-        jamCoins(N, J, i)
+        printCoins(N, J, i)
