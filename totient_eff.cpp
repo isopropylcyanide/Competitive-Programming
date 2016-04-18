@@ -82,29 +82,6 @@ void precompute()
         for (llu j = 0; j < (llu)sieve.size() && sieve[j] <= prime[i] && i * sieve[j] <= max; ++j)
             prime[i * sieve[j]] = sieve[j];
     }
-
-
-    for(llu N=1; N<=10000; N++){
-
-        if(prime[N]==N){
-          T_C[N] = N*(N-1) + 1;
-          continue;
-        }
-
-      llu ans =0;
-
-      for(llu i=1; i*i<=N; i++){
-
-        if (N%i==0)
-          ans += T[i]*i;
-
-        if (N%(N/i)==0 && i!=(N/i))
-          ans += T[N/i]*(N/i);
-        }
-
-        T_C[N]=ans;
-
-    }
 }
 
 
@@ -170,6 +147,9 @@ int main(){
 
     ios_base::sync_with_stdio(false);
     precompute();
+
+    for (int i = 0; i < 100; i ++)
+        cout << i << " : " << T[i] << endl;
 
     solve();
 

@@ -436,21 +436,115 @@ int lca(TreeNode* A, int val1, int val2) {
     return p -> val;
 }
 
+TreeNode * invertTree(TreeNode * t){
+    //Given a binary tree, recursive way to invert it
+    if (!t)
+        return t;
+
+    TreeNode * temp = t -> right;
+    t -> right = t -> left;
+    t -> left = temp;
+
+    if (t -> left)
+        invertTree(t -> left);
+    if (t -> right)
+        invertTree(t -> right);
+
+    return t;
+}
+
+TreeNode * invertTreeIterative(TreeNode * t){
+    //Given a binary tree, iterative way to invert it
+    if (!t)
+        return t;
+
+    queue<TreeNode *> q;
+    q.push(t);
+
+    while (!q.empty()){
+        TreeNode *p = q.front();
+        q.pop();
+
+        if (p -> left)
+            q.push(p -> left);
+        if (p -> right)
+            q.push(p -> right);
+
+            TreeNode * temp = p -> right;
+            p -> right = p -> left;
+            p -> left = temp;
+    }
+
+    return t;
+}
+
+int kthsmallestUtil(TreeNode *t, int k){
+    // Given a bst, a function to find the kth smallest element in the tree utility
+    if (!t)
+        return -1;
+
+    int kA = kthsmallestUtil(t -> left, k);
+    if (k == 0)
+        return kA;
+    k --;
+
+    if (k == 0)
+        return t -> val;
+    return kthsmallestUtil(t -> right, k);
+}
+
+int kthsmallest(TreeNode* root, int k) {
+    // Given a bst, a function to find the kth smallest element in the tree.
+    return kthsmallestUtil(root, k);
+}
+
+TreeNode* flatten(TreeNode* t){
+    // Given a binary tree, flatten it to a linked list in-place.
+    TreeNode *orig = t;
+    if (!t)
+        return t;
+
+    if (t -> left)
+        flatten (t -> left);
+    if ( t -> right)
+        flatten(t -> right);
+
+    TreeNode * temp = t -> right;
+    t -> right = t -> left;
+    t -> left = NULL;
+    while (t -> right)
+        t = t -> right;
+
+    t -> right = temp;
+    return orig;
+}
+
+int t2Sum(TreeNode* t, int B) {
+    // Given a bst and K, you have to find whether or not there exist nodes A and B such that A+ B = K.
+    vector<int> A= inorderTraversal(t);
+
+    map<int, int> M;
+    for (int i = 0; i < A.size(); i++){
+        if (M.find(B - A[i]) != M.end())
+            return 1;
+        M[A[i]] = 1;
+    }
+
+    return 0;
+}
 
 
 int main(){
-    TreeNode *t = new TreeNode(3);
-    t -> right = new TreeNode(1);
-    t -> right -> left = new TreeNode(0);
-    t -> right -> right = new TreeNode(8);
+    TreeNode *t = new TreeNode(10);
+    t -> right = new TreeNode(18);
+    t -> right -> left = new TreeNode(14);
+    t -> right -> right = new TreeNode(20);
 
-    t -> left = new TreeNode(5);
-    t -> left -> left = new TreeNode(6);
-    t -> left -> right = new TreeNode(2);
-    t -> left -> right -> left = new TreeNode(7);
-    t -> left -> right -> right = new TreeNode(4);
+    t -> left = new TreeNode(6);
+    t -> left -> left = new TreeNode(3);
+    t -> left -> right = new TreeNode(7);
 
-    cout << endl << lca(t, 7, 8);
+    cout << t2Sum(t, 26) << endl;
 
     return 0;
 }
