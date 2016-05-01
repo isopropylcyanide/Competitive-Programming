@@ -1,39 +1,40 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
-        unsigned int n;
-        int t,sa[200];
-        cin>>t;
+int main(){
+    // Program to calculate factorials of very large numbers in C++
+    vector<int> F(200, 0);
+    int test, n, m, temp, x;
 
-        while(t<=100 && t--)
-        {
-                cin>>n;
-                int i,j,temp=0,x,m=1;
-                sa[0]=1;
+    cin >> test;
+    while (test --){
+        cin >> n;
+        F[0] = 1;
+        m = 1;
 
-                for(j=2; j<=n; j++)
-                {
+        temp = 0;
+        for (int i = 1; i <= n; i++){
+            for (int j = 0; j < m; j++){
 
-                        for(i=0; i<m; i++)
-                        {
-                                x=sa[i]*j+temp;
-                                sa[i]=x%10;
-                                temp=x/10;
-                        }
-                        while(temp>0)
-                        {
-                                sa[m]=temp%10;
-                                temp=temp/10;
-                                m++;
-                        }
-                }
-                for(i=m-1; i>=0; i--)
-                        cout<<sa[i];
-
-                cout<<endl;
-
+                x = F[j] * i + temp;
+                F[j] = x % 10;
+                temp = x/10;
+            }
+            while (temp){
+                F[m] = temp % 10;
+                temp /= 10;
+                m++;
+            }
+            cout << "\n Stage i: " << i << endl;
+            for (auto a : F)
+                cout << a;
+            cout << endl;
         }
+
+        for (int i = m -1; i >= 0; i--)
+            cout << F[i];
+            cout << endl;
+    }
+
         return 0;
 }

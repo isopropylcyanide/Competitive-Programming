@@ -1,4 +1,7 @@
 
+import os
+import sys
+
 
 def main():
     for _ in xrange(input()):
@@ -26,3 +29,24 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+def showfile(filename):
+    l, w, c = 0, 0, 0
+
+    with open(filename, 'r') as f:
+        for line in f:
+            words = line.split()
+
+            l += 1
+            w += len(words)
+            c += len(line)
+
+            st = os.stat(filename)
+
+    return l, w, c, st[4], st[5], st[8]
+
+
+if __name__ == "__main__":
+    for _ in showfile(sys.stdin.readline.strip()):
+        print _

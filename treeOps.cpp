@@ -533,6 +533,98 @@ int t2Sum(TreeNode* t, int B) {
     return 0;
 }
 
+int findIndex(vector<int> & in, int l, int h, int value){
+    for (int i = l; i <= h; ++i)
+        if (in[i] == value)
+            return i;
+    return 0;
+}
+
+TreeNode *buildTreeInPreUtil(int preInd, vector<int> &preorder, vector<int> &inorder, int l, int h){
+    if (l >=  h)
+        return NULL;
+
+    TreeNode *s = new TreeNode(preorder[preInd]);
+
+    if (l == h)
+        return s;
+
+    int inIndex = findIndex(inorder, l, h, s -> val);
+
+    s -> left = buildTreeInPreUtil(preInd + 1, preorder, inorder, l, inIndex -1);
+    s -> right = buildTreeInPreUtil(preInd + inIndex - l + 1, preorder, inorder, inIndex +1, h);
+
+    return s;
+}
+
+TreeNode* buildTreeInPre(vector<int> &preorder, vector<int> &inorder) {
+    //Given preorder and inorder traversal of a tree, construct the binary tree.
+    if (inorder.size() == 0 || preorder.size() == 0)
+        return NULL;
+    return buildTreeInPreUtil(0, preorder, inorder, 0, inorder.size() -1);
+}
+
+TreeNode *buildTreeInPostUtil(int postStart, int postEnd, vector<int> &postorder, vector<int> &inorder, int l, int h){
+    if (l >  h)
+        return NULL;
+
+    TreeNode *s = new TreeNode(postorder[postEnd]);
+
+    if (l == h)
+        return s;
+
+    int inIndex = findIndex(inorder, l, h, s -> val);
+    int length = inIndex - l;
+
+
+    s -> left = buildTreeInPostUtil(postStart, postStart + length -1, postorder, inorder, l, inIndex -1);
+    s -> right = buildTreeInPostUtil(postStart + length, postEnd - 1, postorder, inorder, inIndex +1, h);
+
+    return s;
+}
+
+TreeNode* buildTree(vector<int> &inorder, vector<int> &postorder) {
+    //Given inorder and postorder traversal of a tree, construct the binary tree.
+    if (inorder.size() == 0 | postorder.size() == 0)
+        return NULL;
+    return buildTreeInPostUtil(0, postorder.size() -1, postorder, inorder, 0, inorder.size() -1);
+}
+
+vector<vector<int> > zigzagLevelOrder(TreeNode* A){
+    //Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).
+    vector<vector<int> > ans;
+    stack<TreeNode *> curLevel, nextLevel;
+    bool leftToRight = true;
+
+    if (!A)
+        return ans;
+
+    curLevel.push(A);
+    vector<int> interim;
+
+    while (!curLevel.empty()){
+        TreeNode * t = curLevel.top();
+        curLevel.pop();
+        interim.push_back(t -> val);
+        if (leftToRight){
+            if (t -> left) nextLevel.push(t -> left);
+            if (t -> right)nextLevel.push(t -> right);
+        }
+        else{
+            if (t -> right)nextLevel.push(t -> right);
+            if (t -> left) nextLevel.push(t -> left);
+        }
+
+        if (curLevel.empty()){
+            ans.push_back(interim);
+            interim.clear();
+            leftToRight = !leftToRight;
+            swap(curLevel, nextLevel);
+        }
+    }
+    return ans;
+}
+
 
 int main(){
     TreeNode *t = new TreeNode(10);
@@ -544,7 +636,10 @@ int main(){
     t -> left -> left = new TreeNode(3);
     t -> left -> right = new TreeNode(7);
 
-    cout << t2Sum(t, 26) << endl;
+    vector<int> in = {4, 2, 5, 1, 6, 7, 3, 8};
+    vector<int> post = {4, 5, 2, 6, 7, 8, 3, 1};
+    for (auto a : preorderTraversal(buildTree(in, post)))
+        cout << a << " - ";
 
     return 0;
 }
