@@ -18,7 +18,7 @@ int * merge(int *a){
 		merged[k++]=a[pos];
 		neg++; pos++;
 	}
-	
+
 	while(neg<=pos){
 		merged[k++]=a[neg];
 		neg++;

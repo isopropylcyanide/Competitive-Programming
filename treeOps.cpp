@@ -625,21 +625,39 @@ vector<vector<int> > zigzagLevelOrder(TreeNode* A){
     return ans;
 }
 
+vector<int> recoverTree(TreeNode* A) {
+    //Two elements of a binary search tree (BST) are swapped by mistake. Tell us the 2 values swapping which the tree will be restored.
+    vector<int> in = inorderTraversal(A);
+    vector<int> anomally;
+
+    int n = in.size();
+    for (int i = n -1; i > 0; i--){
+        if (in[i] < in[i -1]){
+            int j = i -1;
+            while (j >= 0 && in[i] < in[j])
+                j --;
+
+            anomally.push_back(in[i]);
+            anomally.push_back(in[++j]);
+            break;
+        }
+    }
+    sort(anomally.begin(), anomally.end());
+    return anomally;
+}
 
 int main(){
     TreeNode *t = new TreeNode(10);
-    t -> right = new TreeNode(18);
+    t -> right = new TreeNode(7);
     t -> right -> left = new TreeNode(14);
     t -> right -> right = new TreeNode(20);
 
     t -> left = new TreeNode(6);
     t -> left -> left = new TreeNode(3);
-    t -> left -> right = new TreeNode(7);
+    t -> left -> right = new TreeNode(18);
 
-    vector<int> in = {4, 2, 5, 1, 6, 7, 3, 8};
-    vector<int> post = {4, 5, 2, 6, 7, 8, 3, 1};
-    for (auto a : preorderTraversal(buildTree(in, post)))
-        cout << a << " - ";
+    for (auto a : recoverTree(t))
+        cout << a << " ";
 
     return 0;
 }
