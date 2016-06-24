@@ -17,7 +17,7 @@ void preprocess(vector<int> &A){
             if (j == 0)
                 T[i][j] = i;
             else{
-                //break into powerers of 2
+                //break into powers of 2
                 int low = T[i][j -1];
                 int high = T[i + pow(2, j -1)][j -1];
                 if (A[low] < A[high])
@@ -29,10 +29,9 @@ void preprocess(vector<int> &A){
     }
 }
 
-int query(int a, int b, vector<int> &A){
-    int num = b - a + 1;
-    int k = log(num);
-    int l = T[a][k], r = T[num + a - (1 << k)][k];
+int query(int i, int j, vector<int> &A){
+    int k = log(j - i  + 1);
+    int l = T[i][k], r = T[j + 1 - pow(2, k)][k];
     return min(A[l], A[r]);
 
 }
