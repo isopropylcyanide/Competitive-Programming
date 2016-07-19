@@ -1,20 +1,23 @@
+K = input()
+A = list(raw_input())
+N = len(A)
+count = 0
 
-def main():
-    for _ in xrange(input()):
-        X = input()
-        if X == 0:
-            print 3
-
-        else:
-            if X == 1:
-                print 1
+for i in xrange(N - K + 1):
+    m = set()
+    m.add(A[i])
+    extra = 0
+    for j in xrange(i + 1, N):
+        if len(m) == K:
+            if A[j] in m:
+                extra += 1
+                continue
             else:
-                if X % 4 == 0:
-                    print X
-                elif (X - 3) % 4 == 0:
-                    print X - 1
-                else:
-                    print -1
+                break
+        else:
+            m.add(A[j])
 
-if __name__ == '__main__':
-    main()
+    if len(m) == K:
+        count += (1 + extra)
+
+print count

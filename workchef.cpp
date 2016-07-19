@@ -26,7 +26,7 @@ int getSpecial(ll N){
     return spec;
 }
 
-void precompute(){
+inline void precompute(){
     //Precompute special matrix
     for (int i = 0; i < MAX; i++)
         P[i] = getSpecial(i);
@@ -36,9 +36,11 @@ int main(){
     ios :: sync_with_stdio(false);
     cin.tie(NULL);
     precompute();
-
     cin >> Q;
     ll num;
+
+    for (int i = 1; i <= 100; i++)
+        cout << P[i] << " ";
     while (Q--){
         cin >> L >> R >> K;
         num = 0;
