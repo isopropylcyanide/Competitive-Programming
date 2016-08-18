@@ -13,7 +13,7 @@ typedef struct myTuple{
     int first_half;
     int second_half;
 }myTuple;
-// Create a tuple to store rank for each suffix  
+// Create a tuple to store rank for each suffix
 
 int cmp(myTuple a, myTuple b){
     if (a.first_half == b.first_half)
@@ -39,7 +39,7 @@ vector<int> brute_suffix_array(const string &s){
     vector <int> c;
     for (auto & val: m)
         c.push_back(val.second);
-    
+
     return c;
 }
 
@@ -76,7 +76,7 @@ vector <int> smart_suffix_array(const string &s){
             // second half is either -1 (less chars) or the next characters
             L[i].second_half = (i + count) < n ? suffixRank[step -1][i + count] : -1 ;
             L[i].orig_index = i;
-        }   
+        }
 
         sort(L.begin(), L.end(), cmp);
         suffixRank[step][L[0].orig_index] = 0;
@@ -121,9 +121,9 @@ vector<int> kasai_longest_prefix_array(const string & s, const vector <int>& L){
             k++;
         lcp[rank[i]] = k;
     }
-    
+
     return lcp;
-}   
+}
 
 
 /*
@@ -140,8 +140,8 @@ vector<int> z_function(const string &s){
     for (int i = 1; i < n; i++){
         if (i > r){
             l = r = i;
-            while (r < n && s[r - l] == s[r]) 
-                r++;            
+            while (r < n && s[r - l] == s[r])
+                r++;
             z[i] = r - l;
             r --;
         }
@@ -178,7 +178,7 @@ int main(){
     vector <int> H; //LCP array O(n)
     vector <int> Z; //Z array O(n)
 
-    L = smart_suffix_array(s);    
+    L = smart_suffix_array(s);
     H = kasai_longest_prefix_array(s, L);
     Z = z_function(s);
 

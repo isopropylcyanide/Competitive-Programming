@@ -4,7 +4,7 @@ import java.util.*;
 interface performOperation{
     int check(int a);
 }
-class Math{
+class Maths{
    public static int checker(performOperation p ,int num){
        return p.check(num);
    }
@@ -54,7 +54,7 @@ class Math{
 class javaLambda {
 
     public static void main(String[] args)throws IOException {
-        Math ob = new Math();
+        Maths ob = new Maths();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T=Integer.parseInt(br.readLine());
         performOperation op;
@@ -67,17 +67,17 @@ class javaLambda {
             int num=Integer.parseInt(st.nextToken());
             if(ch==1){
                 op = ob.checkEvenOdd();
-                ret = Math.checker(op,num);
+                ret = Maths.checker(op,num);
                 ans = (ret == 0)?"EVEN":"ODD";
             }
             else if(ch==2){
                 op = ob.checkPrime();
-                ret = Math.checker(op,num);
+                ret = Maths.checker(op,num);
                 ans = (ret == 0)?"PRIME":"COMPOSITE";
             }
             else if(ch==3){
                 op = ob.checkPalindrome();
-                ret = Math.checker(op,num);
+                ret = Maths.checker(op,num);
               	ans = (ret == 0)?"PALINDROME":"NOT PALINDROME";
 
             }

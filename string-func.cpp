@@ -15,24 +15,24 @@ struct SuffixArray {
      vector <pair<pair<int,int>,int> > M;
 
     explicit SuffixArray(const string &s) : L(s.length()), s(s), P(1, vector<int>(L, 0)), M(L) {
-       
-            for (int i = 0; i < L; i++) 
+
+            for (int i = 0; i < L; i++)
                 P[0][i] = static_cast<int> (s[i]);
-            
+
             for (int skip = 1, level = 1; skip < L; skip *= 2, level++) {
                  P.push_back(vector<int>(L, 0));
-            
+
                 for (int i = 0; i < L; i++)
                 M[i] = make_pair(make_pair(P[level-1][i], i + skip < L ? P[level-1][i + skip] : -1000), i);
-                
+
                 sort(M.begin(), M.end());
                 for (int i = 0; i < L; i++)
                     P[level][M[i].second] = (i > 0 && M[i].first == M[i-1].first) ? P[level][M[i-1].second] : i;
-            }    
+            }
      }
 
     vector<int> GetSuffixArray(){
-        return P.back(); 
+        return P.back();
     }
 
      // returns the length of the longest common prefix of s[i...L-1] and s[j...L-1]
@@ -70,9 +70,9 @@ struct SuffixArray {
                 k++;
             lcp[rank[i]] = k;
         }
-        
+
         return lcp;
-    }   
+    }
 
 };
 
@@ -124,10 +124,10 @@ int main(){
 
     string str;
     cin>>str;
-    
+
     SuffixArray suffix(str);
     vector<int> v = suffix.GetSuffixArray();
-    
+
     int a[str.length()];
     for (int i = 0; i < v.size(); i++)
         a[v[i]] = i;

@@ -646,18 +646,38 @@ vector<int> recoverTree(TreeNode* A) {
     return anomally;
 }
 
+
+void printEdgeNodesUtil(TreeNode * root, int dist){
+    // Utility method to print a tree's edges/boundary
+    if (!root)
+        return;
+    if (dist != 0)
+        cout << root -> val << " ";
+    printEdgeNodesUtil(root -> left, dist + 1);
+    printEdgeNodesUtil(root -> right, dist - 1);
+}
+
+
+void printEdgeNodes(TreeNode *root){
+    // Prints edge nodes of a tree
+    if (!root)
+        return;
+    cout << root -> val << " ";
+    printEdgeNodesUtil(root, 0);
+}
+
 int main(){
-    TreeNode *t = new TreeNode(10);
-    t -> right = new TreeNode(7);
-    t -> right -> left = new TreeNode(14);
-    t -> right -> right = new TreeNode(20);
+    TreeNode *t = new TreeNode(20);
+    t -> right = new TreeNode(22);
+    t -> right -> right = new TreeNode(25);
 
-    t -> left = new TreeNode(6);
-    t -> left -> left = new TreeNode(3);
-    t -> left -> right = new TreeNode(18);
+    t -> left = new TreeNode(8);
+    t -> left -> left = new TreeNode(4);
+    t -> left -> right = new TreeNode(12);
+    t -> left -> right -> left = new TreeNode(10);
+    t -> left -> right -> right = new TreeNode(14);
 
-    for (auto a : recoverTree(t))
-        cout << a << " ";
+    printEdgeNodes(t);
 
     return 0;
 }

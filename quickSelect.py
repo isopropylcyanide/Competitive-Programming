@@ -28,7 +28,6 @@ def partition(A, l, h):
 
 
 def main():
-    from random import randrange as rr
     # A = []
     # for i in xrange(6):
     #     A.append(rr(0, 100))

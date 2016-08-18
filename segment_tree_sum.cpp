@@ -12,47 +12,47 @@ int getMid(int s, int e) {  return s + (e -s)/2;  }
     st    --> Pointer to segment tree
     si    --> Index of current node in the segment tree. Initially
               0 is passed as root is always at index 0
-    ss & se  --> Starting and ending indexes of the segment represented
+    l & r  --> Starting and ending indexes of the segment represented
                  by current node, i.e., st[si]
-    qs & qe  --> Starting and ending indexes of query range */
-int getSumUtil(int *st, int ss, int se, int qs, int qe, int si)
+    s & e  --> Starting and ending indexes of query range */
+int getSumUtil(int *st, int l, int r, int s, int e, int si)
 {
     // If segment of this node is a part of given range, then return
     // the sum of the segment
-    if (qs <= ss && qe >= se)
+    if (s <= l && e >= r)
         return st[si];
 
     // If segment of this node is outside the given range
-    if (se < qs || ss > qe)
+    if (r < s || l > e)
         return 0;
 
     // If a part of this segment overlaps with the given range
-    int mid = getMid(ss, se);
-    return getSumUtil(st, ss, mid, qs, qe, 2*si+1) +
-           getSumUtil(st, mid+1, se, qs, qe, 2*si+2);
+    int mid = getMid(l, r);
+    return getSumUtil(st, l, mid, s, e, 2*si+1) +
+           getSumUtil(st, mid+1, r, s, e, 2*si+2);
 }
 
 /* A recursive function to update the nodes which have the given
    index in their range. The following are parameters
-    st, si, ss and se are same as getSumUtil()
+    st, si, l and r are same as getSumUtil()
     i    --> index of the element to be updated. This index is
              in input array.
    diff --> Value to be added to all nodes which have i in range */
-void updateValueUtil(int *st, int ss, int se, int i, int diff, int si)
+void updateValueUtil(int *st, int l, int r, int i, int diff, int si)
 {
     // Base Case: If the input index lies outside the range of
     // this segment
-    if (i < ss || i > se)
+    if (i < l || i > r)
         return;
 
     // If the input index is in range of this node, then update
     // the value of the node and its children
     st[si] = st[si] + diff;
-    if (se != ss)
+    if (r != l)
     {
-        int mid = getMid(ss, se);
-        updateValueUtil(st, ss, mid, i, diff, 2*si + 1);
-        updateValueUtil(st, mid+1, se, i, diff, 2*si + 2);
+        int mid = getMid(l, r);
+        updateValueUtil(st, l, mid, i, diff, 2*si + 1);
+        updateValueUtil(st, mid+1, r, i, diff, 2*si + 2);
     }
 }
 
@@ -77,37 +77,37 @@ void updateValue(int arr[], int *st, int n, int i, int new_val)
     updateValueUtil(st, 0, n-1, i, diff, 0);
 }
 
-// Return sum of elements in range from index qs (quey start)
-// to qe (query end).  It mainly uses getSumUtil()
-int getSum(int *st, int n, int qs, int qe)
+// Return sum of elements in range from index s (quey start)
+// to e (query end).  It mainly uses getSumUtil()
+int getSum(int *st, int n, int s, int e)
 {
     // Check for erroneous input values
-    if (qs < 0 || qe > n-1 || qs > qe)
+    if (s < 0 || e > n-1 || s > e)
     {
         printf("Invalid Input");
         return -1;
     }
 
-    return getSumUtil(st, 0, n-1, qs, qe, 0);
+    return getSumUtil(st, 0, n-1, s, e, 0);
 }
 
-// A recursive function that constructs Segment Tree for array[ss..se].
+// A recursive function that constructs Segment Tree for array[l..r].
 // si is index of current node in segment tree st
-int constructSTUtil(int arr[], int ss, int se, int *st, int si)
+int constructSTUtil(int arr[], int l, int r, int *st, int si)
 {
     // If there is one element in array, store it in current node of
     // segment tree and return
-    if (ss == se)
+    if (l == r)
     {
-        st[si] = arr[ss];
-        return arr[ss];
+        st[si] = arr[l];
+        return arr[l];
     }
 
     // If there are more than one elements, then recur for left and
     // right subtrees and store the sum of values in this node
-    int mid = getMid(ss, se);
-    st[si] =  constructSTUtil(arr, ss, mid, st, si*2+1) +
-              constructSTUtil(arr, mid+1, se, st, si*2+2);
+    int mid = getMid(l, r);
+    st[si] =  constructSTUtil(arr, l, mid, st, si*2+1) +
+              constructSTUtil(arr, mid+1, r, st, si*2+2);
     return st[si];
 }
 

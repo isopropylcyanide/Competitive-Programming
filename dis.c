@@ -5,6 +5,7 @@
 
   int main()
  {
+    printf("HI hi\n");
     int t,i,k; int count=0,flag=0;
      char a[10],b[10];
     
