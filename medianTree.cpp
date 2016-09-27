@@ -77,6 +77,7 @@ void removeElem(int &x){
             maxS.erase(maxIt);
         else{
             minS.erase(minIt);
+            
             minS.insert(*maxS.rbegin());
             maxS.erase(maxS.begin());
         }

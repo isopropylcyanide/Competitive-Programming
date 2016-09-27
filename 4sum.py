@@ -29,3 +29,4 @@ class Solution:
 
 if __name__ == '__main__':
     print Solution().fourSum(map(int, raw_input().split()), input())
+    kk
