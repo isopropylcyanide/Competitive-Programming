@@ -24,11 +24,11 @@ def f(i, mod, lastDig):
             if i == 0 and dig == 0:
                 continue
             elif i == 0:
-                ans += f(i + 1, dig % M, dig) % MOD
+                ans = (ans + f(i + 1, dig % M, dig)) % MOD
 
             # else check if to be inserted digit
             elif _PAIR[lastDig][dig] == 0:
-                ans += f(i + 1, (mod * 10 + dig) % M, dig) % MOD
+                ans = (ans + f(i + 1, (mod * 10 + dig) % M, dig)) % MOD
 
     dp[i][mod][lastDig] = ans % MOD
     return ans

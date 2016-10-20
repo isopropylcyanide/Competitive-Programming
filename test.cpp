@@ -1,63 +1,149 @@
-#include <bits/stdc++.h>
-using namespace std;
-typedef long long ll;
-typedef vector<int> vi;
-typedef vector<ll> vl;
-typedef vector<vi> vvi;
-typedef vector<vl> vvl;
-typedef vector<double> vd;
-typedef vector<vd> vvd;
-typedef pair<int, int> pii;
-typedef pair<double, double> pdd;
-typedef vector<pii> vii;
-typedef vector<string> vs;
-static int C[1007];
-bool b;
-map<int,vi> adj;
-void dfs(int x){
-    for(int y:adj[x]){
-        if(C[y]==C[x]){b=false;return ;}// this means the graph is not bipartite
-        if(C[y]==0){
-            if(C[x]==1) C[y]=2;
-            else C[y]=1;
-            dfs(y);
+    #include<bits/stdc++.h>
+    using namespace std;
+    int seg[555555],a[100005],lazy1[555555],lazy2[555555][2],trail[100005];
+    int count5(int num)
+    {
+    	int c=0;
+    	while(num%5==0)
+    	{
+            c++;
+            num/=5;
+    	}
+    	return c;
+    }
+    void banale()
+    {
+    	int sum=1,i,j;
+    	for(i=5;i<100005;i*=5)
+    	{
+            for(j=i;j<100005;j+=i)
+            {
+            	trail[j]=sum;
+            }
+            sum++;
+        }
+        for(i=2;i<100005;i++)
+        {
+        	trail[i]+=trail[i-1];
         }
     }
-}
-int main(){
-    ios_base::sync_with_stdio(0); cin.tie(0);
-    int tc;
-    scanf("%d",&tc);
-    while(tc-->0){
-            b=true;
-            memset(C,0,sizeof C);
-        int n,q;
-        scanf("%d%d",&n,&q);
-        for(int i=1;i<=n;i++)
-            for(int j=1;j<=n;j++)
-            if(i!=j)
-            adj[i].push_back(j);
-        for(int i=0;i<q;i++){// we read the edges in G and erase them from G^c
-        int u,v;
-        scanf("%d %d",&u,&v);
-        vector<int>::iterator it=find(adj[u].begin(), adj[u].end(), v);
-        if(it!=adj[u].end())
-        adj[u].erase(std::remove(adj[u].begin(), adj[u].end(), v), adj[u].end());
-        it=find(adj[v].begin(), adj[v].end(), u);
-        if(it!=adj[v].end())
-        adj[v].erase(std::remove(adj[v].begin(), adj[v].end(), u), adj[v].end());
+    void build(int start,int end,int root)
+    {
+    	if(start==end)
+    	{
+    		seg[root]=count5(a[start]);
+    		return ;
+    	}
+    	int l=(root<<1)+1,r=l+1,mid=(start+end)/2;
+    	build(start,mid,l);
+    	build(mid+1,end,r);
+    	seg[root]=seg[l]+seg[r];
     }
-    for(int i=1;i<=n;i++){
-        if(C[i]==0){// if i has not been explored yet we dfs from i
-            C[i]=1;
-            dfs(i);
+    void upd(int l,int r,int start,int end,int root,int val,int flag)
+    {
+        if(flag==1)
+        {
+        	if(lazy2[root][0])
+        	{
+        		seg[root]=(lazy2[root][0]*(end-start+1))+(trail[end-start+1+lazy2[root][1]]-trail[lazy2[root][1]]);
+        		if(start!=end)
+        		{
+        			int m=(end-start)/2;
+        			lazy2[root*2+1][0]=lazy2[root*2+2][0]=lazy2[root][0];
+        			lazy2[root*2+1][1]=lazy2[root][1];
+        			lazy2[root*2+2][1]=lazy2[root*2+1][1]+m+1;
+        		}
+        		lazy2[root][0]=0;
+            	seg[root]+=((val)*(end-start+1));
+        	    if(start!=end)
+        	    {
+        		    lazy1[root*2+1]=val;
+        		    lazy1[root*2+2]=val;
+        	    }
+            }
+            else
+            {
+            	if(lazy1[root])
+            	{
+            		seg[root]+=((lazy1[root]*(end-start+1)));
+            	if(start!=end)
+        	    {
+        		    lazy1[root*2+1]+=lazy1[root];
+        		    lazy1[root*2+2]+=lazy1[root];
+        	    }
+        	    lazy1[root]=0;
+        	    seg[root]+=((val)*(end-start+1));
+        	    if(start!=end)
+        	    {
+        		    lazy1[root*2+1]+=val;
+        		    lazy1[root*2+2]+=val;
+        	    }
+            }
+        }
+        if(start > end || start > r || end < l)
+            return;
+        if(start >= l and end <= r)
+        {
+            seg[root]+=((val)*(end-start+1));
+        	    if(start!=end)
+        	    {
+        		    lazy1[root*2+1]+=val;
+        		    lazy1[root*2+2]+=val;
+        	    }
+            return;
+        }
+        int mid = (start + end) / 2;
+        upd(l,r,start,mid,root*2+1,val,1);
+        upd(l,r,mid+1,end,root*2+2,val,1);
+        seg[root] = seg[root*2+1] + seg[root*2+2];
         }
     }
-   if(b)
-    printf("YES\n");
-   else
-    printf("NO\n");
-    adj.clear();
-    }//while loop tc
-    return 0;
-}
+    int query(int l,int r,int start,int end,int root)
+    {
+    	if(start>r||end<l||start>end)
+    		return 0;
+    	else if(start>=l&&end<=r)
+    		return seg[root];
+    	else
+    	{
+    		int mid=(start+end)/2,left=(root<<1)+1,right=left+1;
+    		return(query(l,r,start,mid,left)+query(l,r,mid+1,end,right));
+    	}
+    }
+    int main()
+    {
+    	int t;
+    	scanf("%d",&t);
+    	banale();
+
+    	while(t--)
+    	{
+    		int n,m;
+    		scanf("%d %d",&n,&m);
+    		int i;
+    		for(i=0;i<n;i++)
+    		   scanf("%d",&a[i]);
+    		build(0, n -1, 0);
+    		long long sum=0;
+            while(m--)
+            {
+            	int u,v,w,x;
+            	scanf("%d%d%d",&u,&v,&w);
+            	if(u==3)
+            	{
+            		int  tt = query(u-1, v-1, 0, n-1, 0);
+                    sum+=tt;
+            	}
+            	else
+            	{
+            		scanf("%d",&x);
+            		if(u==1)
+            			upd(u-1,v-1,0,n-1,0,x, 1);
+            		else
+            			upd(u-1,v-1,0,n-1,0,x, 2);
+            	}
+            }
+            printf("%lld\n",sum);
+    	}
+    	return 0;
+    }
