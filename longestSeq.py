@@ -39,4 +39,4 @@ class Solution:
         return len(sortedArr)
 
 if __name__ == '__main__':
-    print Solution().lisB([1, 3, 5])
+    print Solution().lis([13, 2, 8, 6, 3, 1, 9])

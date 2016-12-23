@@ -1,18 +1,15 @@
 
-def maxStud(A, B):
-    C = zip(A, B)
-    C.sort(key=lambda x: x[0])
+def solve(K, C):
+    _p = pow(K, 3)
+    rem = _p - C
+    for i in xrange(101):
+        r = pow(i, 3) - C
+        if r % _p == 0:
+            return 'YES'
 
-    prev, count = 0, 0
-    for dead, time in C:
-        if time <= dead - prev:
-            count += 1
-        prev = dead
-    print count
+    return 'NO'
 
 if __name__ == '__main__':
     for _ in xrange(input()):
-        N = input()
-        A = map(int, raw_input().split())
-        B = map(int, raw_input().split())
-        maxStud(A, B)
+        K, C = map(int, raw_input().split())
+        print solve(K, C)

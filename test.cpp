@@ -1,149 +1,193 @@
-    #include<bits/stdc++.h>
-    using namespace std;
-    int seg[555555],a[100005],lazy1[555555],lazy2[555555][2],trail[100005];
-    int count5(int num)
-    {
-    	int c=0;
-    	while(num%5==0)
-    	{
-            c++;
-            num/=5;
-    	}
-    	return c;
-    }
-    void banale()
-    {
-    	int sum=1,i,j;
-    	for(i=5;i<100005;i*=5)
-    	{
-            for(j=i;j<100005;j+=i)
-            {
-            	trail[j]=sum;
-            }
-            sum++;
-        }
-        for(i=2;i<100005;i++)
-        {
-        	trail[i]+=trail[i-1];
-        }
-    }
-    void build(int start,int end,int root)
-    {
-    	if(start==end)
-    	{
-    		seg[root]=count5(a[start]);
-    		return ;
-    	}
-    	int l=(root<<1)+1,r=l+1,mid=(start+end)/2;
-    	build(start,mid,l);
-    	build(mid+1,end,r);
-    	seg[root]=seg[l]+seg[r];
-    }
-    void upd(int l,int r,int start,int end,int root,int val,int flag)
-    {
-        if(flag==1)
-        {
-        	if(lazy2[root][0])
-        	{
-        		seg[root]=(lazy2[root][0]*(end-start+1))+(trail[end-start+1+lazy2[root][1]]-trail[lazy2[root][1]]);
-        		if(start!=end)
-        		{
-        			int m=(end-start)/2;
-        			lazy2[root*2+1][0]=lazy2[root*2+2][0]=lazy2[root][0];
-        			lazy2[root*2+1][1]=lazy2[root][1];
-        			lazy2[root*2+2][1]=lazy2[root*2+1][1]+m+1;
-        		}
-        		lazy2[root][0]=0;
-            	seg[root]+=((val)*(end-start+1));
-        	    if(start!=end)
-        	    {
-        		    lazy1[root*2+1]=val;
-        		    lazy1[root*2+2]=val;
-        	    }
-            }
-            else
-            {
-            	if(lazy1[root])
-            	{
-            		seg[root]+=((lazy1[root]*(end-start+1)));
-            	if(start!=end)
-        	    {
-        		    lazy1[root*2+1]+=lazy1[root];
-        		    lazy1[root*2+2]+=lazy1[root];
-        	    }
-        	    lazy1[root]=0;
-        	    seg[root]+=((val)*(end-start+1));
-        	    if(start!=end)
-        	    {
-        		    lazy1[root*2+1]+=val;
-        		    lazy1[root*2+2]+=val;
-        	    }
-            }
-        }
-        if(start > end || start > r || end < l)
-            return;
-        if(start >= l and end <= r)
-        {
-            seg[root]+=((val)*(end-start+1));
-        	    if(start!=end)
-        	    {
-        		    lazy1[root*2+1]+=val;
-        		    lazy1[root*2+2]+=val;
-        	    }
-            return;
-        }
-        int mid = (start + end) / 2;
-        upd(l,r,start,mid,root*2+1,val,1);
-        upd(l,r,mid+1,end,root*2+2,val,1);
-        seg[root] = seg[root*2+1] + seg[root*2+2];
-        }
-    }
-    int query(int l,int r,int start,int end,int root)
-    {
-    	if(start>r||end<l||start>end)
-    		return 0;
-    	else if(start>=l&&end<=r)
-    		return seg[root];
-    	else
-    	{
-    		int mid=(start+end)/2,left=(root<<1)+1,right=left+1;
-    		return(query(l,r,start,mid,left)+query(l,r,mid+1,end,right));
-    	}
-    }
-    int main()
-    {
-    	int t;
-    	scanf("%d",&t);
-    	banale();
+#include <bits/stdc++.h>
+using namespace std;
 
-    	while(t--)
-    	{
-    		int n,m;
-    		scanf("%d %d",&n,&m);
-    		int i;
-    		for(i=0;i<n;i++)
-    		   scanf("%d",&a[i]);
-    		build(0, n -1, 0);
-    		long long sum=0;
-            while(m--)
-            {
-            	int u,v,w,x;
-            	scanf("%d%d%d",&u,&v,&w);
-            	if(u==3)
-            	{
-            		int  tt = query(u-1, v-1, 0, n-1, 0);
-                    sum+=tt;
-            	}
-            	else
-            	{
-            		scanf("%d",&x);
-            		if(u==1)
-            			upd(u-1,v-1,0,n-1,0,x, 1);
-            		else
-            			upd(u-1,v-1,0,n-1,0,x, 2);
-            	}
-            }
-            printf("%lld\n",sum);
-    	}
-    	return 0;
+#define CLR(a, b) memset(a, (b), sizeof(a))
+#define ll o<<1
+#define rr o<<1|1
+typedef long long LL;
+
+const int MAXN = 1e5 +10;
+const int MOD = 1e9 + 7;
+
+void add(LL &x, LL y){
+     x += y;
+     x %= MOD;
+ }
+
+struct Tree {
+    int l, r, sum, Min;
+};
+
+Tree tree[MAXN<<2];
+
+void pushup(int o) {
+    tree[o].sum = tree[ll].sum + tree[rr].sum;
+    tree[o].Min = min(tree[ll].Min, tree[rr].Min);
+}
+
+void build(int o, int l, int r) {
+    tree[o].l = l; tree[o].r = r;
+    if(l == r) {
+        tree[l].sum = tree[l].Min = 1;
+        return ;
     }
+    int mid = (l + r) >> 1;
+    build(ll, l, mid); build(rr, mid+1, r);
+    pushup(o);
+}
+
+void update(int o, int pos, int v) {
+    if(tree[o].l == tree[o].r) {
+        tree[o].sum = tree[o].Min = v;
+        return ;
+    }
+    int mid = (tree[o].l + tree[o].r) >> 1;
+    if(pos <= mid) update(ll, pos, v);
+    else update(rr, pos, v);
+    pushup(o);
+}
+
+int query(int o, int L, int R, int op) {
+    if(tree[o].l == L && tree[o].r == R)
+        return op == 1 ? tree[o].sum : tree[o].Min;
+
+    int mid = (tree[o].l + tree[o].r) >> 1;
+    if(R <= mid) return query(ll, L, R, op);
+    else if(L > mid) return query(rr, L, R, op);
+    else {
+        if(op == 1) {
+            return query(ll, L, mid, op) + query(rr, mid+1, R, op);
+        }
+        else {
+            return min(query(ll, L, mid, op), query(rr, mid+1, R, op));
+        }
+    }
+}
+
+struct Edge {
+    int from, to, next;
+};
+
+Edge edge[MAXN<<1];
+int head[MAXN], edgenum;
+
+void init(){
+    edgenum = 0;
+    CLR(head, -1);
+}
+
+void addEdge(int u, int v) {
+    Edge E = {u, v, head[u]};
+    edge[edgenum] = E;
+    head[u] = edgenum++;
+}
+
+int son[MAXN], num[MAXN];
+int top[MAXN], pos[MAXN], id;
+int dep[MAXN], pre[MAXN];
+
+void DFS1(int u, int fa, int d) {
+    dep[u] = d;
+    pre[u] = fa;
+    num[u] = 1;
+    son[u] = -1;
+    for(int i = head[u]; i != -1; i = edge[i].next) {
+        int v = edge[i].to;
+        if(v == fa) continue;
+        DFS1(v, u, d+1);
+        num[u] += num[v];
+        if(son[u] == -1 || num[son[u]] < num[v])
+            son[u] = v;
+    }
+}
+
+void DFS2(int u, int T) {
+    top[u] = T; pos[u] = ++id;
+    if(son[u] == -1) return ;
+    DFS2(son[u], T);
+    for(int i = head[u]; i != -1; i = edge[i].next) {
+        int v = edge[i].to;
+        if(v == pre[u] || v == son[u]) continue;
+        DFS2(v, v);
+    }
+}
+
+int GetSum(int u, int v) {
+    int f1 = top[u], f2 = top[v];
+    int ans = 0;
+    while(f1 != f2) {
+        if(dep[f1] < dep[f2]) {
+            swap(u, v);
+            swap(f1, f2);
+        }
+        ans += query(1, pos[f1], pos[u], 1);
+        u = pre[f1], f1 = top[u];
+    }
+    if(u == v) return ans;
+    if(dep[u] > dep[v]) swap(u, v);
+    return ans += query(1, pos[son[u]], pos[v], 1);
+}
+
+int GetMin(int u, int v) {
+    int f1 = top[u], f2 = top[v];
+    int ans = 1;
+    while(f1 != f2) {
+        if(dep[f1] < dep[f2]) {
+            swap(u, v);
+            swap(f1, f2);
+        }
+        ans = min(query(1, pos[f1], pos[u], 2), ans);
+        u = pre[f1], f1 = top[u];
+    }
+    if(u == v) return ans;
+    if(dep[u] > dep[v]) swap(u, v);
+    return min(ans, query(1, pos[son[u]], pos[v], 2));
+}
+
+int s[MAXN], e[MAXN];
+
+int main(){
+    int n;
+    while(scanf("%d", &n) != EOF) {
+        init();
+        for(int i = 1; i <= n-1; i++) {
+            scanf("%d%d", &s[i], &e[i]);
+            addEdge(s[i], e[i]);
+            addEdge(e[i], s[i]);
+        }
+        DFS1(1, -1, 1);
+        id = 0;
+        DFS2(1, 1);
+        build(1, 1, id);
+
+        for(int i = 1; i <= n-1; i++) {
+            if(dep[s[i]] > dep[e[i]])
+                swap(s[i], e[i]);
+            update(1, pos[e[i]], 1);
+        }
+
+        int Q; scanf("%d", &Q);
+        while(Q--) {
+            int op, x, y;
+            scanf("%d", &op);
+            if(op == 1) {
+                scanf("%d", &x);
+                update(1, pos[e[x]], 1);
+            }
+            else if(op == 2) {
+                scanf("%d", &x);
+                update(1, pos[e[x]], 0);
+            }
+            else {
+                scanf("%d%d", &x, &y);
+                if(GetMin(x, y) == 0) {
+                    printf("-1\n");
+                }
+                else {
+                    printf("%d\n", GetSum(x, y));
+                }
+            }
+        }
+    }
+    return 0;
+}
