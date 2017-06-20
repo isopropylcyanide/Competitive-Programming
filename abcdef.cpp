@@ -6,6 +6,7 @@ vector<int> A;
 unordered_map<int, int> L;
 unordered_map<int, int> R;
 
+
 int main(){
 
     ios_base :: sync_with_stdio(false);

@@ -5,7 +5,7 @@
 int main()
  {
    int a;
-   
+  
    scanf("%2d",&a);
       
     while(a!=42)
