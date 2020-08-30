@@ -324,7 +324,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 43    | [Multiply Strings](https://leetcode.com/problems/multiply-strings)                                                                                             | 33.70%         | **Medium**     |
 | 681   | [Next Closest Time](https://leetcode.com/problems/next-closest-time)                                                                                           | 44.90%         | **Medium**     |
 | 1229  | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler)                                                                                           | 52.30%         | **Medium**     |
-| 149   | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                                                     | 16.90%         | **Hard**       |
+| 149   | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                                                     | 16.90%         | **Hard**       | :white_check_mark: |
 | 121   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                                                               | 50.30%         | **Easy**       |
 | 21    | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)                                                                                 | 53.20%         | **Easy**       |
 | 17    | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)                                                   | 46.50%         | **Medium**     |
