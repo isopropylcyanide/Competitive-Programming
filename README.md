@@ -37,7 +37,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 85    | [Maximal Rectangle ](https://leetcode.com/problems/maximal-rectangle)                                                                                           | 37.40%         | **Hard**       |
 | 221   | [Maximal Square ](https://leetcode.com/problems/maximal-square)                                                                                                 | 37.60%         | **Medium**     |
 | 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     |
-| 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                                                                     | 43.90%         | **Hard**       |
+| 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                                                                     | 43.90%         | **Hard**       | :white_check_mark: |
 | 394   | [Decode String ](https://leetcode.com/problems/decode-string)                                                                                                   | 49.60%         | **Medium**     |
 | 362   | [Design Hit Counter ](https://leetcode.com/problems/design-hit-counter)                                                                                         | 63.40%         | **Medium**     |
 | 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                                               | 43.90%         | **Medium**     |
@@ -82,8 +82,8 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 ## Amazon
 
-| **#** | **Title**                                                                                                               | **Acceptance** | **Difficulty** | **Finished**       | **Finished** |
-| ----- | ----------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ | ------------ |
+| **#** | **Title**                                                                                                               | **Acceptance** | **Difficulty** | **Finished**       |
+| ----- | ----------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 1     | [Two Sum ](https://leetcode.com/problems/two-sum)                                                                       | 45.50%         | **Easy**       | :white_check_mark: |
 | 200   | [Number of Islands ](https://leetcode.com/problems/number-of-islands)                                                   | 46.50%         | **Medium**     |
 | 2     | [Add Two Numbers ](https://leetcode.com/problems/add-two-numbers)                                                       | 33.70%         | **Medium**     |
@@ -192,9 +192,9 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 ## LinkedIn
 
-| **#** | **Title**                                                                                                     | **Acceptance** | **Difficulty** | **Finished** |
-| ----- | ------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------ |
-| 53    | [Maximum Subarray ](https://leetcode.com/problems/maximum-subarray)                                           | 46.40%         | **Easy**       |
+| **#** | **Title**                                                                                                     | **Acceptance** | **Difficulty** | **Finished**       |
+| ----- | ------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
+| 53    | [Maximum Subarray ](https://leetcode.com/problems/maximum-subarray)                                           | 46.40%         | **Easy**       | :white_check_mark: |
 | 297   | [Serialize and Deserialize Binary Tree ](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) | 47.10%         | **Hard**       |
 | 380   | [Insert Delete GetRandom O(1) ](https://leetcode.com/problems/insert-delete-getrandom-o1)                     | 47.40%         | **Medium**     |
 | 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                     | 29.20%         | **Medium**     |
@@ -230,8 +230,8 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 ## Microsoft
 
-| **#** | **Title**                                                                                                                                                      | **Acceptance** | **Difficulty** |
-| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- |
+| **#** | **Title**                                                                                                                                                      | **Acceptance** | **Difficulty** | **Finished**       |
+| ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 1246  | [Palindrome Removal](https://leetcode.com/problems/palindrome-removal)                                                                                         | 45.90%         | **Hard**       |
 | 1239  | [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters) | 47.60%         | **Medium**     |
 | 273   | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words)                                                                             | 26.90%         | **Hard**       |
@@ -311,7 +311,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 48    | [Rotate Image](https://leetcode.com/problems/rotate-image)                                                                                                     | 56.20%         | **Medium**     |
 | 722   | [Remove Comments](https://leetcode.com/problems/remove-comments)                                                                                               | 34.30%         | **Medium**     |
 | 380   | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1)                                                                       | 47.40%         | **Medium**     |
-| 75    | [Sort Colors](https://leetcode.com/problems/sort-colors)                                                                                                       | 47.10%         | **Medium**     |
+| 75    | [Sort Colors](https://leetcode.com/problems/sort-colors)                                                                                                       | 47.10%         | **Medium**     | :white_check_mark: |
 | 457   | [Circular Array Loop](https://leetcode.com/problems/circular-array-loop)                                                                                       | 29.20%         | **Medium**     |
 | 557   | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii)                                                                   | 69.50%         | **Easy**       |
 | 49    | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                                                                                 | 56.40%         | **Medium**     |
