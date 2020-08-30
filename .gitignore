@@ -1,3 +1,6 @@
 .vscode/
 *.class
 a.out
+.DS_Store
+*.pyc
+

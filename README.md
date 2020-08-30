@@ -1,6 +1,6 @@
 #### What is it?
 
-A collection of some programs under competetive programming competitions like `Hackerrank`, `CodeChef`, `SpoJ` and `Leetcode` anetc.
+A collection of some programs under competetive programming competitions like `Hackerrank`, `CodeChef`, `SpoJ` and `Leetcode` etc.
 
 ---
 
@@ -27,58 +27,58 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 ## Google
 
-| **#** | **Title**                                                                                                                                                                               | **Acceptance** | **Difficulty** | **Finished**       |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
-| 1     | [Two Sum ](https://leetcode.com/problems/two-sum)                                                                                                                                       | 45.50%         | **Easy**       | :white_check_mark: |
-| 560   | [Subarray Sum Equals K ](https://leetcode.com/problems/subarray-sum-equals-k)                                                                                                           | 43.90%         | **Medium**     | :white_check_mark: |
-| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                                                                                                 | 27.50%         | **Hard**       |
-| 253   | [Meeting Rooms II ](https://leetcode.com/problems/meeting-rooms-ii)                                                                                                                     | 45.60%         | **Medium**     |
-| 76    | [Minimum Window Substring ](https://leetcode.com/problems/minimum-window-substring)                                                                                                     | 34.40%         | **Hard**       |
-| 85    | [Maximal Rectangle ](https://leetcode.com/problems/maximal-rectangle)                                                                                                                   | 37.40%         | **Hard**       |
-| 221   | [Maximal Square ](https://leetcode.com/problems/maximal-square)                                                                                                                         | 37.60%         | **Medium**     |
-| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                                                                                               | 29.20%         | **Medium**     |
-| 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                                                                                             | 43.90%         | **Hard**       |
-| 394   | [Decode String ](https://leetcode.com/problems/decode-string)                                                                                                                           | 49.60%         | **Medium**     |
-| 362   | [Design Hit Counter ](https://leetcode.com/problems/design-hit-counter)                                                                                                                 | 63.40%         | **Medium**     |
-| 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                                                                       | 43.90%         | **Medium**     |
-| 843   | [Guess the Word ](https://leetcode.com/problems/guess-the-word)                                                                                                                         | 46.00%         | **Hard**       |
-| 1048  | [Longest String Chain ](https://leetcode.com/problems/longest-string-chain)                                                                                                             | 54.50%         | **Medium**     |
-| 329   | [Longest Increasing Path in a Matrix ](https://leetcode.com/problems/longest-increasing-path-in-a-matrix)                                                                               | 43.20%         | **Hard**       |
-| 315   | [Count of Smaller Numbers After Self ](https://leetcode.com/problems/count-of-smaller-numbers-after-self)                                                                               | 41.40%         | **Hard**       |
-| 642   | [Design Search Autocomplete System ](https://leetcode.com/problems/design-search-autocomplete-system)                                                                                   | 44.40%         | **Hard**       |
-| 410   | [Split Array Largest Sum ](https://leetcode.com/problems/split-array-largest-sum)                                                                                                       | 44.40%         | **Hard**       |
-| 359   | [Logger Rate Limiter ](https://leetcode.com/problems/logger-rate-limiter)                                                                                                               | 70.30%         | **Easy**       |
-| 593   | [Valid Square ](https://leetcode.com/problems/valid-square)                                                                                                                             | 42.90%         | **Medium**     |
-| 946   | [Validate Stack Sequences ](https://leetcode.com/problems/validate-stack-sequences)                                                                                                     | 61.40%         | **Medium**     |
-| 1153  | [String Transforms Into Another String ](https://leetcode.com/problems/string-transforms-into-another-string)                                                                           | 35.90%         | **Hard**       |
-| 727   | [Minimum Window Subsequence ](https://leetcode.com/problems/minimum-window-subsequence)                                                                                                 | 41.50%         | **Hard**       |
-| 399   | [Evaluate Division ](https://leetcode.com/problems/evaluate-division)                                                                                                                   | 51.30%         | **Medium**     |
-| 1110  | [Delete Nodes And Return Forest ](https://leetcode.com/problems/delete-nodes-and-return-forest)                                                                                         | 66.70%         | **Medium**     |
-| 722   | [Remove Comments ](https://leetcode.com/problems/remove-comments)                                                                                                                       | 34.30%         | **Medium**     |
-| 809   | [Expressive Words ](https://leetcode.com/problems/expressive-words)                                                                                                                     | 47.20%         | **Medium**     |
-| 729   | [My Calendar I ](https://leetcode.com/problems/my-calendar-i)                                                                                                                           | 51.50%         | **Medium**     |
-| 1031  | [Maximum Sum of Two Non-Overlapping Subarrays ](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays)                                                             | 57.70%         | **Medium**     |
-| 752   | [Open the Lock ](https://leetcode.com/problems/open-the-lock)                                                                                                                           | 51.50%         | **Medium**     |
-| 679   | [24 Game ](https://leetcode.com/problems/24-game)                                                                                                                                       | 46.10%         | **Hard**       |
-| 489   | [Robot Room Cleaner ](https://leetcode.com/problems/robot-room-cleaner)                                                                                                                 | 69.40%         | **Hard**       |
-| 1146  | [Snapshot Array ](https://leetcode.com/problems/snapshot-array)                                                                                                                         | 37.00%         | **Medium**     |
-| 862   | [Shortest Subarray with Sum at Least K ](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k)                                                                           | 24.40%         | **Hard**       |
-| 846   | [Hand of Straights ](https://leetcode.com/problems/hand-of-straights)                                                                                                                   | 53.90%         | **Medium**     |
-| 659   | [Split Array into Consecutive Subsequences ](https://leetcode.com/problems/split-array-into-consecutive-subsequences)                                                                   | 43.60%         | **Medium**     |
-| 346   | [Moving Average from Data Stream ](https://leetcode.com/problems/moving-average-from-data-stream)                                                                                       | 70.70%         | **Easy**       |
-| 1438  | [Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit ](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) | 42.60%         | **Medium**     |
-| 1088  | [Confusing Number II ](https://leetcode.com/problems/confusing-number-ii)                                                                                                               | 43.50%         | **Hard**       |
-| 299   | [Bulls and Cows ](https://leetcode.com/problems/bulls-and-cows)                                                                                                                         | 42.30%         | **Easy**       |
-| 951   | [Flip Equivalent Binary Trees ](https://leetcode.com/problems/flip-equivalent-binary-trees)                                                                                             | 65.70%         | **Medium**     |
-| 1376  | [Time Needed to Inform All Employees ](https://leetcode.com/problems/time-needed-to-inform-all-employees)                                                                               | 55.20%         | **Medium**     |
-| 1231  | [Divide Chocolate ](https://leetcode.com/problems/divide-chocolate)                                                                                                                     | 52.20%         | **Hard**       |
-| 1296  | [Divide Array in Sets of K Consecutive Numbers ](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers)                                                           | 53.20%         | **Medium**     |
-| 375   | [Guess Number Higher or Lower II ](https://leetcode.com/problems/guess-number-higher-or-lower-ii)                                                                                       | 40.20%         | **Medium**     |
-| 1140  | [Stone Game II ](https://leetcode.com/problems/stone-game-ii)                                                                                                                           | 62.80%         | **Medium**     |
-| 1423  | [Maximum Points You Can Obtain from Cards ](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)                                                                     | 41.30%         | **Medium**     |
-| 833   | [Find And Replace in String ](https://leetcode.com/problems/find-and-replace-in-string)                                                                                                 | 50.30%         | **Medium**     |
-| 1345  | [Jump Game IV ](https://leetcode.com/problems/jump-game-iv)                                                                                                                             | 37.40%         | **Hard**       |
-| 1463  | [Cherry Pickup II ](https://leetcode.com/problems/cherry-pickup-ii)                                                                                                                     | 64.50%         | **Hard**       |
+| **#** | **Title**                                                                                                                                                       | **Acceptance** | **Difficulty** | **Finished**       |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
+| 1     | [Two Sum ](https://leetcode.com/problems/two-sum)                                                                                                               | 45.50%         | **Easy**       | :white_check_mark: |
+| 560   | [Subarray Sum Equals K ](https://leetcode.com/problems/subarray-sum-equals-k)                                                                                   | 43.90%         | **Medium**     | :white_check_mark: |
+| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                                                                         | 27.50%         | **Hard**       |
+| 253   | [Meeting Rooms II ](https://leetcode.com/problems/meeting-rooms-ii)                                                                                             | 45.60%         | **Medium**     |
+| 76    | [Minimum Window Substring ](https://leetcode.com/problems/minimum-window-substring)                                                                             | 34.40%         | **Hard**       |
+| 85    | [Maximal Rectangle ](https://leetcode.com/problems/maximal-rectangle)                                                                                           | 37.40%         | **Hard**       |
+| 221   | [Maximal Square ](https://leetcode.com/problems/maximal-square)                                                                                                 | 37.60%         | **Medium**     |
+| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     |
+| 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                                                                     | 43.90%         | **Hard**       |
+| 394   | [Decode String ](https://leetcode.com/problems/decode-string)                                                                                                   | 49.60%         | **Medium**     |
+| 362   | [Design Hit Counter ](https://leetcode.com/problems/design-hit-counter)                                                                                         | 63.40%         | **Medium**     |
+| 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                                               | 43.90%         | **Medium**     |
+| 843   | [Guess the Word ](https://leetcode.com/problems/guess-the-word)                                                                                                 | 46.00%         | **Hard**       |
+| 1048  | [Longest String Chain ](https://leetcode.com/problems/longest-string-chain)                                                                                     | 54.50%         | **Medium**     |
+| 329   | [Longest Increasing Path in a Matrix ](https://leetcode.com/problems/longest-increasing-path-in-a-matrix)                                                       | 43.20%         | **Hard**       |
+| 315   | [Count of Smaller Numbers After Self ](https://leetcode.com/problems/count-of-smaller-numbers-after-self)                                                       | 41.40%         | **Hard**       |
+| 642   | [Design Search Autocomplete System ](https://leetcode.com/problems/design-search-autocomplete-system)                                                           | 44.40%         | **Hard**       |
+| 410   | [Split Array Largest Sum ](https://leetcode.com/problems/split-array-largest-sum)                                                                               | 44.40%         | **Hard**       |
+| 359   | [Logger Rate Limiter ](https://leetcode.com/problems/logger-rate-limiter)                                                                                       | 70.30%         | **Easy**       |
+| 593   | [Valid Square ](https://leetcode.com/problems/valid-square)                                                                                                     | 42.90%         | **Medium**     |
+| 946   | [Validate Stack Sequences ](https://leetcode.com/problems/validate-stack-sequences)                                                                             | 61.40%         | **Medium**     |
+| 1153  | [String Transforms Into Another String ](https://leetcode.com/problems/string-transforms-into-another-string)                                                   | 35.90%         | **Hard**       |
+| 727   | [Minimum Window Subsequence ](https://leetcode.com/problems/minimum-window-subsequence)                                                                         | 41.50%         | **Hard**       |
+| 399   | [Evaluate Division ](https://leetcode.com/problems/evaluate-division)                                                                                           | 51.30%         | **Medium**     |
+| 1110  | [Delete Nodes And Return Forest ](https://leetcode.com/problems/delete-nodes-and-return-forest)                                                                 | 66.70%         | **Medium**     |
+| 722   | [Remove Comments ](https://leetcode.com/problems/remove-comments)                                                                                               | 34.30%         | **Medium**     |
+| 809   | [Expressive Words ](https://leetcode.com/problems/expressive-words)                                                                                             | 47.20%         | **Medium**     |
+| 729   | [My Calendar I ](https://leetcode.com/problems/my-calendar-i)                                                                                                   | 51.50%         | **Medium**     |
+| 1031  | [Maximum Sum of Two Non-Overlapping Subarrays ](https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays)                                     | 57.70%         | **Medium**     |
+| 752   | [Open the Lock ](https://leetcode.com/problems/open-the-lock)                                                                                                   | 51.50%         | **Medium**     |
+| 679   | [24 Game ](https://leetcode.com/problems/24-game)                                                                                                               | 46.10%         | **Hard**       |
+| 489   | [Robot Room Cleaner ](https://leetcode.com/problems/robot-room-cleaner)                                                                                         | 69.40%         | **Hard**       |
+| 1146  | [Snapshot Array ](https://leetcode.com/problems/snapshot-array)                                                                                                 | 37.00%         | **Medium**     |
+| 862   | [Shortest Subarray with Sum at Least K ](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k)                                                   | 24.40%         | **Hard**       |
+| 846   | [Hand of Straights ](https://leetcode.com/problems/hand-of-straights)                                                                                           | 53.90%         | **Medium**     |
+| 659   | [Split Array into Consecutive Subsequences ](https://leetcode.com/problems/split-array-into-consecutive-subsequences)                                           | 43.60%         | **Medium**     |
+| 346   | [Moving Average from Data Stream ](https://leetcode.com/problems/moving-average-from-data-stream)                                                               | 70.70%         | **Easy**       |
+| 1438  | [Longest Continuous Subarray With Abs Diff <= Limit ](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) | 42.60%         | **Medium**     |
+| 1088  | [Confusing Number II ](https://leetcode.com/problems/confusing-number-ii)                                                                                       | 43.50%         | **Hard**       |
+| 299   | [Bulls and Cows ](https://leetcode.com/problems/bulls-and-cows)                                                                                                 | 42.30%         | **Easy**       |
+| 951   | [Flip Equivalent Binary Trees ](https://leetcode.com/problems/flip-equivalent-binary-trees)                                                                     | 65.70%         | **Medium**     |
+| 1376  | [Time Needed to Inform All Employees ](https://leetcode.com/problems/time-needed-to-inform-all-employees)                                                       | 55.20%         | **Medium**     |
+| 1231  | [Divide Chocolate ](https://leetcode.com/problems/divide-chocolate)                                                                                             | 52.20%         | **Hard**       |
+| 1296  | [Divide Array in Sets of K Consecutive Numbers ](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers)                                   | 53.20%         | **Medium**     |
+| 375   | [Guess Number Higher or Lower II ](https://leetcode.com/problems/guess-number-higher-or-lower-ii)                                                               | 40.20%         | **Medium**     |
+| 1140  | [Stone Game II ](https://leetcode.com/problems/stone-game-ii)                                                                                                   | 62.80%         | **Medium**     |
+| 1423  | [Maximum Points You Can Obtain from Cards ](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)                                             | 41.30%         | **Medium**     |
+| 833   | [Find And Replace in String ](https://leetcode.com/problems/find-and-replace-in-string)                                                                         | 50.30%         | **Medium**     |
+| 1345  | [Jump Game IV ](https://leetcode.com/problems/jump-game-iv)                                                                                                     | 37.40%         | **Hard**       |
+| 1463  | [Cherry Pickup II ](https://leetcode.com/problems/cherry-pickup-ii)                                                                                             | 64.50%         | **Hard**       |
 
 ## Amazon
 
