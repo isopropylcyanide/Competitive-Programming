@@ -114,7 +114,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 79    | [Word Search ](https://leetcode.com/problems/word-search)                                                               | 34.90%         | **Medium**     |
 | 588   | [Design In-Memory File System ](https://leetcode.com/problems/design-in-memory-file-system)                             | 45.30%         | **Hard**       |
 | 460   | [LFU Cache ](https://leetcode.com/problems/lfu-cache)                                                                   | 33.90%         | **Hard**       |
-| 239   | [Sliding Window Maximum ](https://leetcode.com/problems/sliding-window-maximum)                                         | 42.80%         | **Hard**       |
+| 239   | [Sliding Window Maximum ](https://leetcode.com/problems/sliding-window-maximum)                                         | 42.80%         | **Hard**       | :white_check_mark: |
 | 348   | [Design Tic-Tac-Toe ](https://leetcode.com/problems/design-tic-tac-toe)                                                 | 54.00%         | **Medium**     |
 | 472   | [Concatenated Words ](https://leetcode.com/problems/concatenated-words)                                                 | 43.30%         | **Hard**       |
 | 1152  | [Analyze User Website Visit Pattern ](https://leetcode.com/problems/analyze-user-website-visit-pattern)                 | 43.60%         | **Medium**     |
