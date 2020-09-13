@@ -15,6 +15,9 @@ class Solution:
     # @return a list of strings
 
     def letterCombinations(self, A):
+        if len(A) == 0:
+            return []
+
         def getMeAll(s, i):
             if i == len(A):
                 finalLis.append(s)
@@ -27,6 +30,7 @@ class Solution:
         finalLis, s = [], ""
         getMeAll(s, 0)
         return finalLis
+
 
 if __name__ == '__main__':
     print Solution().letterCombinations("1899442")

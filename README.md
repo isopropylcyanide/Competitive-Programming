@@ -327,7 +327,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 149   | [Max Points on a Line](https://leetcode.com/problems/max-points-on-a-line)                                                                                     | 16.90%         | **Hard**       | :white_check_mark: |
 | 121   | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                                                               | 50.30%         | **Easy**       |
 | 21    | [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists)                                                                                 | 53.20%         | **Easy**       |
-| 17    | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)                                                   | 46.50%         | **Medium**     |
+| 17    | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number)                                                   | 46.50%         | **Medium**     | :white_check_mark: |
 | 24    | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs)                                                                                       | 50.00%         | **Medium**     |
 | 33    | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)                                                                 | 34.50%         | **Medium**     |
 | 773   | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle)                                                                                                 | 59.00%         | **Hard**       |
