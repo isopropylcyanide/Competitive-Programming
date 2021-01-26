@@ -36,7 +36,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 76    | [Minimum Window Substring ](https://leetcode.com/problems/minimum-window-substring)                                                                             | 34.40%         | **Hard**       |
 | 85    | [Maximal Rectangle ](https://leetcode.com/problems/maximal-rectangle)                                                                                           | 37.40%         | **Hard**       |
 | 221   | [Maximal Square ](https://leetcode.com/problems/maximal-square)                                                                                                 | 37.60%         | **Medium**     |
-| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     |
+| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     | :white_check_mark: |
 | 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                                                                     | 43.90%         | **Hard**       | :white_check_mark: |
 | 394   | [Decode String ](https://leetcode.com/problems/decode-string)                                                                                                   | 49.60%         | **Medium**     |
 | 362   | [Design Hit Counter ](https://leetcode.com/problems/design-hit-counter)                                                                                         | 63.40%         | **Medium**     |
@@ -106,7 +106,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 297   | [Serialize and Deserialize Binary Tree ](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)           | 47.10%         | **Hard**       |
 | 49    | [Group Anagrams ](https://leetcode.com/problems/group-anagrams)                                                         | 56.40%         | **Medium**     |
 | 763   | [Partition Labels ](https://leetcode.com/problems/partition-labels)                                                     | 75.60%         | **Medium**     |
-| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                               | 29.20%         | **Medium**     |
+| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                               | 29.20%         | **Medium**     | :white_check_mark: |
 | 138   | [Copy List with Random Pointer ](https://leetcode.com/problems/copy-list-with-random-pointer)                           | 35.80%         | **Medium**     |
 | 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                             | 43.90%         | **Hard**       |
 | 140   | [Word Break II ](https://leetcode.com/problems/word-break-ii)                                                           | 31.50%         | **Hard**       |
@@ -197,7 +197,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 53    | [Maximum Subarray ](https://leetcode.com/problems/maximum-subarray)                                           | 46.40%         | **Easy**       | :white_check_mark: |
 | 297   | [Serialize and Deserialize Binary Tree ](https://leetcode.com/problems/serialize-and-deserialize-binary-tree) | 47.10%         | **Hard**       |
 | 380   | [Insert Delete GetRandom O(1) ](https://leetcode.com/problems/insert-delete-getrandom-o1)                     | 47.40%         | **Medium**     |
-| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                     | 29.20%         | **Medium**     |
+| 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                     | 29.20%         | **Medium**     | :white_check_mark: |
 | 364   | [Nested List Weight Sum II ](https://leetcode.com/problems/nested-list-weight-sum-ii)                         | 62.60%         | **Medium**     |
 | 150   | [Evaluate Reverse Polish Notation ](https://leetcode.com/problems/evaluate-reverse-polish-notation)           | 36.10%         | **Medium**     |
 | 102   | [Binary Tree Level Order Traversal ](https://leetcode.com/problems/binary-tree-level-order-traversal)         | 54.20%         | **Medium**     |
@@ -296,7 +296,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 133   | [Clone Graph](https://leetcode.com/problems/clone-graph)                                                                                                       | 34.20%         | **Medium**     |
 | 89    | [Gray Code](https://leetcode.com/problems/gray-code)                                                                                                           | 48.90%         | **Medium**     |
 | 622   | [Design Circular Queue](https://leetcode.com/problems/design-circular-queue)                                                                                   | 43.50%         | **Medium**     |
-| 127   | [Word Ladder](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     |
+| 127   | [Word Ladder](https://leetcode.com/problems/word-ladder)                                                                                                       | 29.20%         | **Medium**     | :white_check_mark: |
 | 126   | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii)                                                                                                 | 21.90%         | **Hard**       |
 | 37    | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver)                                                                                                   | 43.20%         | **Hard**       |
 | 253   | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)                                                                                             | 45.60%         | **Medium**     |
