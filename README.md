@@ -137,10 +137,10 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 ## Facebook
 
-| **#** | **Title**                                                                                                                                     | **Acceptance** | **Difficulty** | **Finished** |
-| ----- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------ |
+| **#** | **Title**                                                                                                                                     | **Acceptance** | **Difficulty** | **Finished**       |
+| ----- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                                                   | 39.90%         | **Hard**       |
-| 238   | [Product of Array Except Self ](https://leetcode.com/problems/product-of-array-except-self)                                                   | 59.90%         | **Medium**     |
+| 238   | [Product of Array Except Self ](https://leetcode.com/problems/product-of-array-except-self)                                                   | 59.90%         | **Medium**     | :white_check_mark: |
 | 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                                             | 39.10%         | **Medium**     |
 | 273   | [Integer to English Words ](https://leetcode.com/problems/integer-to-english-words)                                                           | 26.90%         | **Hard**       |
 | 953   | [Verifying an Alien Dictionary ](https://leetcode.com/problems/verifying-an-alien-dictionary)                                                 | 54.30%         | **Easy**       |
@@ -332,7 +332,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 33    | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)                                                                 | 34.50%         | **Medium**     |
 | 773   | [Sliding Puzzle](https://leetcode.com/problems/sliding-puzzle)                                                                                                 | 59.00%         | **Hard**       |
 | 129   | [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers)                                                                             | 48.70%         | **Medium**     |
-| 238   | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                                                     | 59.90%         | **Medium**     |
+| 238   | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self)                                                                     | 59.90%         | **Medium**     | :white_check_mark: |
 | 77    | [Combinations](https://leetcode.com/problems/combinations)                                                                                                     | 54.30%         | **Medium**     |
 | 528   | [Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight)                                                                               | 43.90%         | **Medium**     |
 | 53    | [Maximum Subarray](https://leetcode.com/problems/maximum-subarray)                                                                                             | 46.40%         | **Easy**       |

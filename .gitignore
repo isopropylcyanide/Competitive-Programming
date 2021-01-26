@@ -1,6 +1,4 @@
-.vscode/
-*.class
+*.dSYM
 a.out
-.DS_Store
-*.pyc
+.vscode*
 
