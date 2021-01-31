@@ -160,7 +160,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 986   | [Interval List Intersections ](https://leetcode.com/problems/interval-list-intersections)                                                     | 67.20%         | **Medium**     |
 | 173   | [Binary Search Tree Iterator ](https://leetcode.com/problems/binary-search-tree-iterator)                                                     | 56.10%         | **Medium**     |
 | 987   | [Vertical Order Traversal of a Binary Tree ](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree)                         | 35.40%         | **Medium**     |
-| 236   | [Lowest Common Ancestor of a Binary Tree ](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                             | 45.20%         | **Medium**     |
+| 236   | [Lowest Common Ancestor of a Binary Tree ](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                             | 45.20%         | **Medium**     | :white_check_mark: |
 | 67    | [Add Binary ](https://leetcode.com/problems/add-binary)                                                                                       | 44.10%         | **Easy**       |
 | 543   | [Diameter of Binary Tree ](https://leetcode.com/problems/diameter-of-binary-tree)                                                             | 48.30%         | **Easy**       |
 | 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                             | 43.90%         | **Medium**     |
@@ -300,7 +300,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 126   | [Word Ladder II](https://leetcode.com/problems/word-ladder-ii)                                                                                                 | 21.90%         | **Hard**       |
 | 37    | [Sudoku Solver](https://leetcode.com/problems/sudoku-solver)                                                                                                   | 43.20%         | **Hard**       |
 | 253   | [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii)                                                                                             | 45.60%         | **Medium**     |
-| 236   | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                                               | 45.20%         | **Medium**     |
+| 236   | [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                                               | 45.20%         | **Medium**     | :white_check_mark: |
 | 346   | [Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream)                                                               | 70.70%         | **Easy**       |
 | 767   | [Reorganize String](https://leetcode.com/problems/reorganize-string)                                                                                           | 48.30%         | **Medium**     |
 | 706   | [Design HashMap](https://leetcode.com/problems/design-hashmap)                                                                                                 | 60.90%         | **Easy**       |
