@@ -154,7 +154,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 88    | [Merge Sorted Array ](https://leetcode.com/problems/merge-sorted-array)                                                                       | 39.20%         | **Easy**       |
 | 215   | [Kth Largest Element in an Array ](https://leetcode.com/problems/kth-largest-element-in-an-array)                                             | 54.90%         | **Medium**     |
 | 199   | [Binary Tree Right Side View ](https://leetcode.com/problems/binary-tree-right-side-view)                                                     | 53.70%         | **Medium**     |
-| 124   | [Binary Tree Maximum Path Sum ](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                   | 34.10%         | **Hard**       |
+| 124   | [Binary Tree Maximum Path Sum ](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                   | 34.10%         | **Hard**       | :white_check_mark: |
 | 680   | [Valid Palindrome II ](https://leetcode.com/problems/valid-palindrome-ii)                                                                     | 36.50%         | **Easy**       |
 | 301   | [Remove Invalid Parentheses ](https://leetcode.com/problems/remove-invalid-parentheses)                                                       | 43.10%         | **Hard**       |
 | 986   | [Interval List Intersections ](https://leetcode.com/problems/interval-list-intersections)                                                     | 67.20%         | **Medium**     |
@@ -247,7 +247,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 25    | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group)                                                                             | 41.70%         | **Hard**       |
 | 348   | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe)                                                                                         | 54.00%         | **Medium**     |
 | 450   | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst)                                                                                     | 42.90%         | **Medium**     |
-| 124   | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                                     | 34.10%         | **Hard**       |
+| 124   | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                                     | 34.10%         | **Hard**       | :white_check_mark: |
 | 340   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)                     | 43.90%         | **Hard**       |
 | 218   | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem)                                                                                       | 34.40%         | **Hard**       |
 | 200   | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                                           | 46.50%         | **Medium**     |
