@@ -86,7 +86,6 @@ int maxProfit(vector<int> &prices) {
 
 int main() {
     cin.tie(0);
-    std::cout << "Here " << (1 << 31);
     ios::sync_with_stdio(false);
 
     vector<int> nums_a = {1, 2, 3, 0, 2};
