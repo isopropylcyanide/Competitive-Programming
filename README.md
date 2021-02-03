@@ -279,7 +279,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 140   | [Word Break II](https://leetcode.com/problems/word-break-ii)                                                                                                   | 31.50%         | **Hard**       |
 | 443   | [String Compression](https://leetcode.com/problems/string-compression)                                                                                         | 41.00%         | **Easy**       |
 | 8     | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi)                                                                               | 15.30%         | **Medium**     |
-| 148   | [Sort List](https://leetcode.com/problems/sort-list)                                                                                                           | 41.80%         | **Medium**     |
+| 148   | [Sort List](https://leetcode.com/problems/sort-list)                                                                                                           | 41.80%         | **Medium**     | :white_check_mark: |
 | 630   | [Course Schedule III](https://leetcode.com/problems/course-schedule-iii)                                                                                       | 33.30%         | **Hard**       |
 | 155   | [Min Stack](https://leetcode.com/problems/min-stack)                                                                                                           | 44.20%         | **Easy**       |
 | 621   | [Task Scheduler](https://leetcode.com/problems/task-scheduler)                                                                                                 | 48.60%         | **Medium**     |
