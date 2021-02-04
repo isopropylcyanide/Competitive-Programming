@@ -1,61 +1,67 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-stack<int> s;
+int largestRectangleArea(vector<int>& heights) {
+    stack<int> possibleLeftBars;
+    int maxGlobalArea = 0;
 
-void display(){
-    cout <<"\n STACK: ";
-    stack<int> newS(s);
-    while (!newS.empty()){
-        cout << newS.top() << " ";
-        newS.pop();
-    }
-    cout << endl;
-}
+    for (int bar = 0; bar < heights.size(); bar++) {
+        if (possibleLeftBars.empty()) {
+            //this bar can make a left node
+            possibleLeftBars.push(bar);
+        } else {
+            //stack is not empty..evaluate this bar against previous
+            int currentLeftBarHeight = heights[possibleLeftBars.top()];
+            int thisBarHeight = heights[bar];
 
-int main(){
-    int n, temp, i = 0;
-    int indexMin, indexMax, maxArea, minHeight;
-    cin >> n;
+            if (thisBarHeight >= currentLeftBarHeight) {
+                //this again could be a left bar candidate with a bigger area..who knows
+                //don't kill the old one because that can still form an area with this one
+                possibleLeftBars.push(bar);
+            } else {
+                //now the prev bar can definitely not work with this one
+                //so we try popping it as a candidate and check the max area we could obtain
+                while (!possibleLeftBars.empty() && heights[possibleLeftBars.top()] > heights[bar]) {
+                    int leftTallerBar = possibleLeftBars.top();
+                    //pop the bar..see how far it has come on the breadth
+                    possibleLeftBars.pop();
 
-    vector<int> ht;
-    for (int i = 0; i < n; i++){
-        cin >> temp;
-        ht.push_back(temp);
-    }
-
-    while (i < n){
-        if (s.empty() || ht[i] > ht[s.top()])
-            s.push(i++);
-        else {
-            temp = s.top();
-            s.pop();
-            int areaWithTop = ht[temp] * (s.empty() ? i : i - s.top() - 1);
-
-            if (maxArea < areaWithTop)
-                maxArea = areaWithTop;
+                    //see what area we could get from the current
+                    int width = possibleLeftBars.empty() ? bar : bar - possibleLeftBars.top() - 1;
+                    int areaWithThisBar = heights[leftTallerBar] * width;
+                    maxGlobalArea = max(maxGlobalArea, areaWithThisBar);
+                }
+                //then add this bar to the height
+                possibleLeftBars.push(bar);
+            }
         }
     }
 
-    while (! s.empty()){
-        temp = s.top();
-        s.pop();
-        int areaWithTop = ht[temp] * (s.empty() ? i : i - s.top() - 1);
-
-        if (maxArea < areaWithTop)
-            maxArea = areaWithTop;
+    //at the end you'd have some bar's left, think always increasing
+    //their area is simply (end index - their index) * their height
+    //this is the same logic that we had in the downward trend
+    while (!possibleLeftBars.empty()) {
+        int bar = possibleLeftBars.top();
+        possibleLeftBars.pop();
+        int width = possibleLeftBars.empty() ? heights.size() : heights.size() - possibleLeftBars.top() - 1;
+        int areaWithThisBar = width * heights[bar];
+        maxGlobalArea = max(maxGlobalArea, areaWithThisBar);
     }
 
-    cout << maxArea <<endl;
+    return maxGlobalArea;
 }
 
+int main() {
+    cin.tie(0);
+    ios::sync_with_stdio(false);
+    // vector<int> heights = {2, 1, 5, 6, 2, 3};
+    // vector<int> heights = {1, 2, 6, 10};
+    // vector<int> heights = {};
+    // vector<int> heights = {0, 9};
+    vector<int> heights = {9, 0};
+    // vector<int> heights = {2, 1, 2};
+    // vector<int> heights = {6, 7, 5, 2, 4, 5, 9, 3};
 
-
-
-
-
-
-
-
-
-// END
+    std::cout << largestRectangleArea(heights) << endl;
+    return 0;
+}
