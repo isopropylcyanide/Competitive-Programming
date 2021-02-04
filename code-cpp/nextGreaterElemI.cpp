@@ -41,7 +41,6 @@ vector<int> nextGreaterElement(vector<int> &nums1, vector<int> &nums2) {
     }
     //get all
     vector<int> nextElements = nextGreaterElements(nums2);
-    std::cout << "Yay: " << nextElements << endl;
     vector<int> output;
     for (int i = 0; i < nums1.size(); i++) {
         int idx = elemMap[nums1[i]];
