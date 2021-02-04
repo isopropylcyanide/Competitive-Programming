@@ -3,6 +3,7 @@ using namespace std;
 
 int largestRectangleArea(vector<int>& heights) {
     stack<int> possibleLeftBars;
+    heights.push_back(0);
     int maxGlobalArea = 0;
 
     for (int bar = 0; bar < heights.size(); bar++) {
@@ -36,18 +37,6 @@ int largestRectangleArea(vector<int>& heights) {
             }
         }
     }
-
-    //at the end you'd have some bar's left, think always increasing
-    //their area is simply (end index - their index) * their height
-    //this is the same logic that we had in the downward trend
-    while (!possibleLeftBars.empty()) {
-        int bar = possibleLeftBars.top();
-        possibleLeftBars.pop();
-        int width = possibleLeftBars.empty() ? heights.size() : heights.size() - possibleLeftBars.top() - 1;
-        int areaWithThisBar = width * heights[bar];
-        maxGlobalArea = max(maxGlobalArea, areaWithThisBar);
-    }
-
     return maxGlobalArea;
 }
 
