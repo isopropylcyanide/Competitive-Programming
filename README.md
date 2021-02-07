@@ -67,7 +67,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 659   | [Split Array into Consecutive Subsequences ](https://leetcode.com/problems/split-array-into-consecutive-subsequences)                                           | 43.60%         | **Medium**     |
 | 346   | [Moving Average from Data Stream ](https://leetcode.com/problems/moving-average-from-data-stream)                                                               | 70.70%         | **Easy**       |
 | 1438  | [Longest Continuous Subarray With Abs Diff <= Limit ](https://leetcode.com/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit) | 42.60%         | **Medium**     |
-| 1088  | [Confusing Number II ](https://leetcode.com/problems/confusing-number-ii)                                                                                       | 43.50%         | **Hard**       |
+| 1088  | [Confusing Number II ](https://leetcode.com/problems/confusing-number-ii)                                                                                       | 43.50%         | **Hard**       | :white_check_mark: |
 | 299   | [Bulls and Cows ](https://leetcode.com/problems/bulls-and-cows)                                                                                                 | 42.30%         | **Easy**       |
 | 951   | [Flip Equivalent Binary Trees ](https://leetcode.com/problems/flip-equivalent-binary-trees)                                                                     | 65.70%         | **Medium**     |
 | 1376  | [Time Needed to Inform All Employees ](https://leetcode.com/problems/time-needed-to-inform-all-employees)                                                       | 55.20%         | **Medium**     |
