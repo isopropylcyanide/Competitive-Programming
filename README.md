@@ -73,7 +73,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 1376  | [Time Needed to Inform All Employees ](https://leetcode.com/problems/time-needed-to-inform-all-employees)                                                       | 55.20%         | **Medium**     |
 | 1231  | [Divide Chocolate ](https://leetcode.com/problems/divide-chocolate)                                                                                             | 52.20%         | **Hard**       |
 | 1296  | [Divide Array in Sets of K Consecutive Numbers ](https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers)                                   | 53.20%         | **Medium**     |
-| 375   | [Guess Number Higher or Lower II ](https://leetcode.com/problems/guess-number-higher-or-lower-ii)                                                               | 40.20%         | **Medium**     |
+| 375   | [Guess Number Higher or Lower II ](https://leetcode.com/problems/guess-number-higher-or-lower-ii)                                                               | 40.20%         | **Medium**     | :white_check_mark: |
 | 1140  | [Stone Game II ](https://leetcode.com/problems/stone-game-ii)                                                                                                   | 62.80%         | **Medium**     |
 | 1423  | [Maximum Points You Can Obtain from Cards ](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards)                                             | 41.30%         | **Medium**     |
 | 833   | [Find And Replace in String ](https://leetcode.com/problems/find-and-replace-in-string)                                                                         | 50.30%         | **Medium**     |
