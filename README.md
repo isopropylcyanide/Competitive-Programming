@@ -122,7 +122,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 211   | [Add and Search Word - Data structure design ](https://leetcode.com/problems/add-and-search-word-data-structure-design) | 36.60%         | **Medium**     |
 | 126   | [Word Ladder II ](https://leetcode.com/problems/word-ladder-ii)                                                         | 21.90%         | **Hard**       |
 | 240   | [Search a 2D Matrix II ](https://leetcode.com/problems/search-a-2d-matrix-ii)                                           | 43.10%         | **Medium**     |
-| 210   | [Course Schedule II ](https://leetcode.com/problems/course-schedule-ii)                                                 | 39.70%         | **Medium**     |
+| 210   | [Course Schedule II ](https://leetcode.com/problems/course-schedule-ii)                                                 | 39.70%         | **Medium**     | :white_check_mark: |
 | 642   | [Design Search Autocomplete System ](https://leetcode.com/problems/design-search-autocomplete-system)                   | 44.40%         | **Hard**       |
 | 480   | [Sliding Window Median ](https://leetcode.com/problems/sliding-window-median)                                           | 37.00%         | **Hard**       |
 | 863   | [All Nodes Distance K in Binary Tree ](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree)               | 55.00%         | **Medium**     |
@@ -267,7 +267,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 297   | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)                                                   | 47.10%         | **Hard**       |
 | 4     | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)                                                                       | 29.40%         | **Hard**       |
 | 134   | [Gas Station](https://leetcode.com/problems/gas-station)                                                                                                       | 38.20%         | **Medium**     |
-| 207   | [Course Schedule](https://leetcode.com/problems/course-schedule)                                                                                               | 42.80%         | **Medium**     |
+| 207   | [Course Schedule](https://leetcode.com/problems/course-schedule)                                                                                               | 42.80%         | **Medium**     | :white_check_mark: |
 | 445   | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                                                         | 54.30%         | **Medium**     |
 | 105   | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)           | 48.20%         | **Medium**     |
 | 42    | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)                                                                                       | 48.50%         | **Hard**       |
