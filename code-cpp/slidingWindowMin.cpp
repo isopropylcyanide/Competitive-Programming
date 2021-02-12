@@ -51,8 +51,6 @@ int segment(int x, vector<int> space) {
             std::cout << endl;
         }
     }
-    //at the end we'll have some elements left
-
     return globalMax;
 }
 
