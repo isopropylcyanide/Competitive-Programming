@@ -256,7 +256,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 99    | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree)                                                                         | 39.30%         | **Hard**       |
 | 468   | [Validate IP Address](https://leetcode.com/problems/validate-ip-address)                                                                                       | 24.00%         | **Medium**     |
 | 116   | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)                                       | 44.60%         | **Medium**     |
-| 41    | [First Missing Positive](https://leetcode.com/problems/first-missing-positive)                                                                                 | 31.80%         | **Hard**       |
+| 41    | [First Missing Positive](https://leetcode.com/problems/first-missing-positive)                                                                                 | 31.80%         | **Hard**       | :white_check_mark: |
 | 93    | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses)                                                                                     | 35.30%         | **Medium**     |
 | 23    | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)                                                                                     | 39.90%         | **Hard**       |
 | 103   | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)                                             | 47.00%         | **Medium**     |
