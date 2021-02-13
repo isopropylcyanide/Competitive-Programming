@@ -51,7 +51,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 593   | [Valid Square ](https://leetcode.com/problems/valid-square)                                                                                                     | 42.90%         | **Medium**     |
 | 946   | [Validate Stack Sequences ](https://leetcode.com/problems/validate-stack-sequences)                                                                             | 61.40%         | **Medium**     |
 | 1153  | [String Transforms Into Another String ](https://leetcode.com/problems/string-transforms-into-another-string)                                                   | 35.90%         | **Hard**       |
-| 727   | [Minimum Window Subsequence ](https://leetcode.com/problems/minimum-window-subsequence)                                                                         | 41.50%         | **Hard**       |
+| 727   | [Minimum Window Subsequence ](https://leetcode.com/problems/minimum-window-subsequence)                                                                         | 41.50%         | **Hard**       | :white_check_mark: |
 | 399   | [Evaluate Division ](https://leetcode.com/problems/evaluate-division)                                                                                           | 51.30%         | **Medium**     |
 | 1110  | [Delete Nodes And Return Forest ](https://leetcode.com/problems/delete-nodes-and-return-forest)                                                                 | 66.70%         | **Medium**     |
 | 722   | [Remove Comments ](https://leetcode.com/problems/remove-comments)                                                                                               | 34.30%         | **Medium**     |
