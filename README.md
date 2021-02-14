@@ -169,7 +169,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 211   | [Add and Search Word - Data structure design ](https://leetcode.com/problems/add-and-search-word-data-structure-design)                       | 36.60%         | **Medium**     |
 | 158   | [Read N Characters Given Read4 II - Call multiple times ](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times) | 33.30%         | **Hard**       |
 | 125   | [Valid Palindrome ](https://leetcode.com/problems/valid-palindrome)                                                                           | 35.80%         | **Easy**       |
-| 636   | [Exclusive Time of Functions ](https://leetcode.com/problems/exclusive-time-of-functions)                                                     | 51.80%         | **Medium**     |
+| 636   | [Exclusive Time of Functions ](https://leetcode.com/problems/exclusive-time-of-functions)                                                     | 51.80%         | **Medium**     | :white_check_mark: |
 | 340   | [Longest Substring with At Most K Distinct Characters ](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)   | 43.90%         | **Hard**       |
 | 621   | [Task Scheduler ](https://leetcode.com/problems/task-scheduler)                                                                               | 48.60%         | **Medium**     |
 | 311   | [Sparse Matrix Multiplication ](https://leetcode.com/problems/sparse-matrix-multiplication)                                                   | 61.50%         | **Medium**     |
@@ -286,7 +286,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 432   | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure)                                                                              | 32.20%         | **Hard**       |
 | 285   | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst)                                                                             | 40.00%         | **Medium**     |
 | 240   | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii)                                                                                   | 43.10%         | **Medium**     |
-| 636   | [Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions)                                                                       | 51.80%         | **Medium**     |
+| 636   | [Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions)                                                                       | 51.80%         | **Medium**     | :white_check_mark: |
 | 510   | [Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii)                                                                       | 57.90%         | **Medium**     |
 | 716   | [Max Stack](https://leetcode.com/problems/max-stack)                                                                                                           | 42.50%         | **Easy**       |
 | 179   | [Largest Number](https://leetcode.com/problems/largest-number)                                                                                                 | 28.50%         | **Medium**     |
