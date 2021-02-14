@@ -95,7 +95,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 1192  | [Critical Connections in a Network ](https://leetcode.com/problems/critical-connections-in-a-network)                   | 48.60%         | **Hard**       |
 | 21    | [Merge Two Sorted Lists ](https://leetcode.com/problems/merge-two-sorted-lists)                                         | 53.20%         | **Easy**       |
 | 994   | [Rotting Oranges ](https://leetcode.com/problems/rotting-oranges)                                                       | 47.60%         | **Medium**     |
-| 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                       | 39.10%         | **Medium**     |
+| 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                       | 39.10%         | **Medium**     | :white_check_mark: |
 | 273   | [Integer to English Words ](https://leetcode.com/problems/integer-to-english-words)                                     | 26.90%         | **Hard**       |
 | 121   | [Best Time to Buy and Sell Stock ](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)                       | 50.30%         | **Easy**       |
 | 692   | [Top K Frequent Words ](https://leetcode.com/problems/top-k-frequent-words)                                             | 51.50%         | **Medium**     |
@@ -141,7 +141,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                                                   | 39.90%         | **Hard**       |
 | 238   | [Product of Array Except Self ](https://leetcode.com/problems/product-of-array-except-self)                                                   | 59.90%         | **Medium**     | :white_check_mark: |
-| 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                                             | 39.10%         | **Medium**     |
+| 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                                             | 39.10%         | **Medium**     | :white_check_mark: |
 | 273   | [Integer to English Words ](https://leetcode.com/problems/integer-to-english-words)                                                           | 26.90%         | **Hard**       |
 | 953   | [Verifying an Alien Dictionary ](https://leetcode.com/problems/verifying-an-alien-dictionary)                                                 | 54.30%         | **Easy**       |
 | 560   | [Subarray Sum Equals K ](https://leetcode.com/problems/subarray-sum-equals-k)                                                                 | 43.90%         | **Medium**     |
@@ -320,7 +320,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 1044  | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring)                                                                       | 32.00%         | **Hard**       |
 | 950   | [Reveal Cards In Increasing Order](https://leetcode.com/problems/reveal-cards-in-increasing-order)                                                             | 74.30%         | **Medium**     |
 | 128   | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence)                                                                     | 44.90%         | **Hard**       |
-| 56    | [Merge Intervals](https://leetcode.com/problems/merge-intervals)                                                                                               | 39.10%         | **Medium**     |
+| 56    | [Merge Intervals](https://leetcode.com/problems/merge-intervals)                                                                                               | 39.10%         | **Medium**     | :white_check_mark: |
 | 43    | [Multiply Strings](https://leetcode.com/problems/multiply-strings)                                                                                             | 33.70%         | **Medium**     |
 | 681   | [Next Closest Time](https://leetcode.com/problems/next-closest-time)                                                                                           | 44.90%         | **Medium**     |
 | 1229  | [Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler)                                                                                           | 52.30%         | **Medium**     |
