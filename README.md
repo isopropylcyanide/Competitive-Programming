@@ -31,7 +31,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 1     | [Two Sum ](https://leetcode.com/problems/two-sum)                                                                                                               | 45.50%         | **Easy**       | :white_check_mark: |
 | 560   | [Subarray Sum Equals K ](https://leetcode.com/problems/subarray-sum-equals-k)                                                                                   | 43.90%         | **Medium**     | :white_check_mark: |
-| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                                                                         | 27.50%         | **Hard**       |
+| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                                                                         | 27.50%         | **Hard**       | :white_check_mark: |
 | 253   | [Meeting Rooms II ](https://leetcode.com/problems/meeting-rooms-ii)                                                                                             | 45.60%         | **Medium**     |
 | 76    | [Minimum Window Substring ](https://leetcode.com/problems/minimum-window-substring)                                                                             | 34.40%         | **Hard**       | :white_check_mark: |
 | 85    | [Maximal Rectangle ](https://leetcode.com/problems/maximal-rectangle)                                                                                           | 37.40%         | **Hard**       |
@@ -224,7 +224,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 716   | [Max Stack ](https://leetcode.com/problems/max-stack)                                                         | 40.40%         | **Easy**       |
 | 254   | [Factor Combinations ](https://leetcode.com/problems/factor-combinations)                                     | 44.70%         | **Medium**     |
 | 380   | [Insert Delete GetRandom O(1) ](https://leetcode.com/problems/insert-delete-getrandom-o1)                     | 43.30%         | **Medium**     |
-| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                       | 23.90%         | **Hard**       |
+| 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                       | 23.90%         | **Hard**       | :white_check_mark: |
 | 366   | [Find Leaves of Binary Tree ](https://leetcode.com/problems/find-leaves-of-binary-tree)                       | 66.50%         | **Medium**     |
 | 605   | [Can Place Flowers ](https://leetcode.com/problems/can-place-flowers)                                         | 31.10%         | **Easy**       |
 

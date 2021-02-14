@@ -80,6 +80,7 @@ TreeNode *correctBinaryTree(TreeNode *root) {
         return NULL;
     }
     if (root->right != NULL && visited.find(root->right->val) != visited.end()) {
+        //we've seen this before
         return NULL;
     }
     visited.insert(root->val);
