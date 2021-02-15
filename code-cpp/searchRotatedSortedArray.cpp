@@ -45,7 +45,7 @@ int search(vector<int>& nums, int target) {
     // distinct values
     int l = 0, r = nums.size() - 1;
     if (r == 0) {
-        return nums[0] == target;
+        return nums[0] == target ? 0 : -1;
     }
     //find the rotation index first
     int pivot = findPivot(l, r, nums);
