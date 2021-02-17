@@ -2,13 +2,13 @@
 using namespace std;
 
 class Solution {
-public:
-void nextPermutation(vector<int> &);
+   public:
+    void nextPermutation(vector<int> &);
 };
 
-ostream& operator<<(ostream &c, vector<int> A){
+ostream &operator<<(ostream &c, vector<int> A) {
     for (auto a : A)
-        c << a <<" ";
+        c << a << " ";
     c << endl;
     return c;
 }
@@ -19,20 +19,20 @@ void Solution::nextPermutation(vector<int> &A) {
     bool revSorted = true;
     int index = -1;
 
-    for (int i = 0; i < A.size() -1; i++)
-        if (A[i] < A[i +1]){
+    for (int i = 0; i < A.size() - 1; i++)
+        if (A[i] < A[i + 1]) {
             revSorted = false;
             index = i;
             // break;
         }
 
-    if (revSorted){
-        sort(A.begin(), A.end());
+    if (revSorted) {
+        reverse(A.begin(), A.end());
         return;
     }
     // else there's index j > i such that A[j] > A[i]
     int highestJ = 0, i = index;
-    for (int j = i +1; j < A.size(); j++){
+    for (int j = i + 1; j < A.size(); j++) {
         if (A[j] > A[i])
             highestJ = j;
     }
@@ -40,23 +40,22 @@ void Solution::nextPermutation(vector<int> &A) {
     swap(A[i], A[highestJ]);
 
     // Reverse A from i +1 till end
-    reverse(A.begin() + i +1, A.end());
+    reverse(A.begin() + i + 1, A.end());
 }
 
+int main() {
+    int N;
+    cin >> N;
+    vector<int> A(N);
+    for (int i = 0; i < N; i++)
+        cin >> A[i];
 
-int main(){
-        int N;
-        cin >> N;
-        vector<int> A(N);
-        for(int i = 0; i < N; i++)
-            cin >> A[i];
+    Solution s;
+    s.nextPermutation(A);
+    cout << "\nGetting nextPerm: ";
+    for (auto a : A)
+        cout << a << " ";
 
-        Solution s;
-        s.nextPermutation(A);
-        cout <<"\nGetting nextPerm: ";
-        for (auto a : A)
-                cout << a << " ";
-
-        cout << endl;
-        return 0;
+    cout << endl;
+    return 0;
 }

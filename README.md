@@ -148,7 +148,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 1249  | [Minimum Remove to Make Valid Parentheses ](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)                           | 62.40%         | **Medium**     |
 | 269   | [Alien Dictionary ](https://leetcode.com/problems/alien-dictionary)                                                                           | 33.30%         | **Hard**       |
 | 973   | [K Closest Points to Origin ](https://leetcode.com/problems/k-closest-points-to-origin)                                                       | 63.60%         | **Medium**     |
-| 31    | [Next Permutation ](https://leetcode.com/problems/next-permutation)                                                                           | 32.50%         | **Medium**     |
+| 31    | [Next Permutation ](https://leetcode.com/problems/next-permutation)                                                                           | 32.50%         | **Medium**     | :white_check_mark: |
 | 415   | [Add Strings ](https://leetcode.com/problems/add-strings)                                                                                     | 47.30%         | **Easy**       |
 | 297   | [Serialize and Deserialize Binary Tree ](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)                                 | 47.10%         | **Hard**       |
 | 88    | [Merge Sorted Array ](https://leetcode.com/problems/merge-sorted-array)                                                                       | 39.20%         | **Easy**       |
