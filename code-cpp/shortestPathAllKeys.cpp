@@ -116,14 +116,14 @@ int main() {
     //     "@.a.#",
     //     "###.#",
     //     "b.A.B"};
-    // vector<string> grid = {
-    //     "@..aA",
-    //     "..B#.",
-    //     "....b"};
     vector<string> grid = {
-        "@...a",
-        ".###A",
-        "b.BCc"};
+        "@..aA",
+        "..B#.",
+        "....b"};
+    // vector<string> grid = {
+    //     "@...a",
+    //     ".###A",
+    //     "b.BCc"};
     std::cout << "Answer is " << shortestPathAllKeys(grid) << endl;
     return 0;
 }
