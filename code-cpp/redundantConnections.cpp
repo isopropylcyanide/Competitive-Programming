@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-#define MAX 10
+#define MAX 100000
 //basically use union find and at any point, if you see an edge
 //that creates a cycle, terminate it
 
