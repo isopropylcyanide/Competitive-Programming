@@ -91,7 +91,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 42    | [Trapping Rain Water ](https://leetcode.com/problems/trapping-rain-water)                                               | 48.50%         | **Hard**       |
 | 146   | [LRU Cache ](https://leetcode.com/problems/lru-cache)                                                                   | 32.80%         | **Medium**     |
 | 5     | [Longest Palindromic Substring ](https://leetcode.com/problems/longest-palindromic-substring)                           | 29.30%         | **Medium**     |
-| 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                             | 39.90%         | **Hard**       |
+| 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                             | 39.90%         | **Hard**       | :white_check_mark: |
 | 1192  | [Critical Connections in a Network ](https://leetcode.com/problems/critical-connections-in-a-network)                   | 48.60%         | **Hard**       |
 | 21    | [Merge Two Sorted Lists ](https://leetcode.com/problems/merge-two-sorted-lists)                                         | 53.20%         | **Easy**       |
 | 994   | [Rotting Oranges ](https://leetcode.com/problems/rotting-oranges)                                                       | 47.60%         | **Medium**     |
@@ -139,7 +139,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 
 | **#** | **Title**                                                                                                                                     | **Acceptance** | **Difficulty** | **Finished**       |
 | ----- | --------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
-| 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                                                   | 39.90%         | **Hard**       |
+| 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                                                   | 39.90%         | **Hard**       | :white_check_mark: |
 | 238   | [Product of Array Except Self ](https://leetcode.com/problems/product-of-array-except-self)                                                   | 59.90%         | **Medium**     | :white_check_mark: |
 | 56    | [Merge Intervals ](https://leetcode.com/problems/merge-intervals)                                                                             | 39.10%         | **Medium**     | :white_check_mark: |
 | 273   | [Integer to English Words ](https://leetcode.com/problems/integer-to-english-words)                                                           | 26.90%         | **Hard**       |
@@ -258,7 +258,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 116   | [Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node)                                       | 44.60%         | **Medium**     |
 | 41    | [First Missing Positive](https://leetcode.com/problems/first-missing-positive)                                                                                 | 31.80%         | **Hard**       | :white_check_mark: |
 | 93    | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses)                                                                                     | 35.30%         | **Medium**     |
-| 23    | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)                                                                                     | 39.90%         | **Hard**       |
+| 23    | [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)                                                                                     | 39.90%         | **Hard**       | :white_check_mark: |
 | 103   | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal)                                             | 47.00%         | **Medium**     |
 | 232   | [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)                                                                     | 49.10%         | **Easy**       |
 | 1     | [Two Sum](https://leetcode.com/problems/two-sum)                                                                                                               | 45.50%         | **Easy**       |
