@@ -43,7 +43,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                                               | 43.90%         | **Medium**     |
 | 843   | [Guess the Word ](https://leetcode.com/problems/guess-the-word)                                                                                                 | 46.00%         | **Hard**       |
 | 1048  | [Longest String Chain ](https://leetcode.com/problems/longest-string-chain)                                                                                     | 54.50%         | **Medium**     |
-| 329   | [Longest Increasing Path in a Matrix ](https://leetcode.com/problems/longest-increasing-path-in-a-matrix)                                                       | 43.20%         | **Hard**       |
+| 329   | [Longest Increasing Path in a Matrix ](https://leetcode.com/problems/longest-increasing-path-in-a-matrix)                                                       | 43.20%         | **Hard**       | :white_check_mark: |
 | 315   | [Count of Smaller Numbers After Self ](https://leetcode.com/problems/count-of-smaller-numbers-after-self)                                                       | 41.40%         | **Hard**       |
 | 642   | [Design Search Autocomplete System ](https://leetcode.com/problems/design-search-autocomplete-system)                                                           | 44.40%         | **Hard**       |
 | 410   | [Split Array Largest Sum ](https://leetcode.com/problems/split-array-largest-sum)                                                                               | 44.40%         | **Hard**       |
