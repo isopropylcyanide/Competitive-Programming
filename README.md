@@ -88,7 +88,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 200   | [Number of Islands ](https://leetcode.com/problems/number-of-islands)                                                   | 46.50%         | **Medium**     |
 | 2     | [Add Two Numbers ](https://leetcode.com/problems/add-two-numbers)                                                       | 33.70%         | **Medium**     |
 | 937   | [Reorder Data in Log Files ](https://leetcode.com/problems/reorder-data-in-log-files)                                   | 54.30%         | **Easy**       |
-| 42    | [Trapping Rain Water ](https://leetcode.com/problems/trapping-rain-water)                                               | 48.50%         | **Hard**       |
+| 42    | [Trapping Rain Water ](https://leetcode.com/problems/trapping-rain-water)                                               | 48.50%         | **Hard**       | :white_check_mark: |
 | 146   | [LRU Cache ](https://leetcode.com/problems/lru-cache)                                                                   | 32.80%         | **Medium**     |
 | 5     | [Longest Palindromic Substring ](https://leetcode.com/problems/longest-palindromic-substring)                           | 29.30%         | **Medium**     |
 | 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                             | 39.90%         | **Hard**       | :white_check_mark: |
@@ -270,7 +270,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 207   | [Course Schedule](https://leetcode.com/problems/course-schedule)                                                                                               | 42.80%         | **Medium**     | :white_check_mark: |
 | 445   | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                                                         | 54.30%         | **Medium**     |
 | 105   | [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)           | 48.20%         | **Medium**     |
-| 42    | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)                                                                                       | 48.50%         | **Hard**       |
+| 42    | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)                                                                                       | 48.50%         | **Hard**       | :white_check_mark: |
 | 74    | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)                                                                                         | 36.40%         | **Medium**     |
 | 151   | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)                                                                           | 21.10%         | **Medium**     |
 | 102   | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)                                                           | 54.20%         | **Medium**     |
