@@ -110,7 +110,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 138   | [Copy List with Random Pointer ](https://leetcode.com/problems/copy-list-with-random-pointer)                           | 35.80%         | **Medium**     |
 | 295   | [Find Median from Data Stream ](https://leetcode.com/problems/find-median-from-data-stream)                             | 43.90%         | **Hard**       |
 | 140   | [Word Break II ](https://leetcode.com/problems/word-break-ii)                                                           | 31.50%         | **Hard**       |
-| 227   | [Basic Calculator II ](https://leetcode.com/problems/basic-calculator-ii)                                               | 36.70%         | **Medium**     |
+| 227   | [Basic Calculator II ](https://leetcode.com/problems/basic-calculator-ii)                                               | 36.70%         | **Medium**     | :white_check_mark: |
 | 79    | [Word Search ](https://leetcode.com/problems/word-search)                                                               | 34.90%         | **Medium**     |
 | 588   | [Design In-Memory File System ](https://leetcode.com/problems/design-in-memory-file-system)                             | 45.30%         | **Hard**       |
 | 460   | [LFU Cache ](https://leetcode.com/problems/lfu-cache)                                                                   | 33.90%         | **Hard**       |
