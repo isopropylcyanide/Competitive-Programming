@@ -1,21 +1,5 @@
 #include <bits/stdc++.h>
 
-int f(int openPair, int i, int n, string &s, int sum) {
-    if (i >= n) {
-        return sum;
-    }
-    if (s[i] == ")") {
-        //essentially, from the open pair position till now, we need to get the result
-        string rev = s.substr(openPair, (n - i));
-    }
-}
-
-int calculateWithParenthesis(string s) {
-    //everything is valid
-    //if you see a ), then
-    return 0;
-}
-
 //Solves expression value when given value contains no parenthesis
 int calculate(string s) {
     int n = s.length();
@@ -49,6 +33,7 @@ int calculate(string s) {
                 digitStack.push(stackTop / number);
             }
             operation = ch;
+            //reset number as we have seen a digit
             number = 0;
         }
     }
