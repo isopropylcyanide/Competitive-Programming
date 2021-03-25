@@ -47,7 +47,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 315   | [Count of Smaller Numbers After Self ](https://leetcode.com/problems/count-of-smaller-numbers-after-self)                                                       | 41.40%         | **Hard**       |
 | 642   | [Design Search Autocomplete System ](https://leetcode.com/problems/design-search-autocomplete-system)                                                           | 44.40%         | **Hard**       |
 | 410   | [Split Array Largest Sum ](https://leetcode.com/problems/split-array-largest-sum)                                                                               | 44.40%         | **Hard**       |
-| 359   | [Logger Rate Limiter ](https://leetcode.com/problems/logger-rate-limiter)                                                                                       | 70.30%         | **Easy**       |
+| 359   | [Logger Rate Limiter ](https://leetcode.com/problems/logger-rate-limiter)                                                                                       | 70.30%         | **Easy**       | :white_check_mark: |
 | 593   | [Valid Square ](https://leetcode.com/problems/valid-square)                                                                                                     | 42.90%         | **Medium**     |
 | 946   | [Validate Stack Sequences ](https://leetcode.com/problems/validate-stack-sequences)                                                                             | 61.40%         | **Medium**     |
 | 1153  | [String Transforms Into Another String ](https://leetcode.com/problems/string-transforms-into-another-string)                                                   | 35.90%         | **Hard**       |
