@@ -4,11 +4,12 @@ bool dfs(string &s, unordered_set<string> &visited, int maxPossible, int n, int 
     if (visited.size() == maxPossible) {
         return true;
     } else {
-        // for (int i = 0; i < k; i++) {
-        for (int i = k; i >= 0; i--) {
+        for (int i = 0; i < k; i++) {
+            // for (int i = k; i >= 0; i--) {
             //add an edge for each of the k edges
             s.push_back('0' + i);
             string cur = s.substr(s.size() - n);
+            //if the edge before isn't seen, it is of interest to us
             if (visited.find(cur) == visited.end()) {
                 visited.insert(cur);
 
