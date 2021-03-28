@@ -164,7 +164,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 67    | [Add Binary ](https://leetcode.com/problems/add-binary)                                                                                       | 44.10%         | **Easy**       |
 | 543   | [Diameter of Binary Tree ](https://leetcode.com/problems/diameter-of-binary-tree)                                                             | 48.30%         | **Easy**       |
 | 528   | [Random Pick with Weight ](https://leetcode.com/problems/random-pick-with-weight)                                                             | 43.90%         | **Medium**     |
-| 438   | [Find All Anagrams in a String ](https://leetcode.com/problems/find-all-anagrams-in-a-string)                                                 | 43.00%         | **Medium**     |
+| 438   | [Find All Anagrams in a String ](https://leetcode.com/problems/find-all-anagrams-in-a-string)                                                 | 43.00%         | **Medium**     | :white_check_mark: |
 | 767   | [Reorganize String ](https://leetcode.com/problems/reorganize-string)                                                                         | 48.30%         | **Medium**     |
 | 211   | [Add and Search Word - Data structure design ](https://leetcode.com/problems/add-and-search-word-data-structure-design)                       | 36.60%         | **Medium**     |
 | 158   | [Read N Characters Given Read4 II - Call multiple times ](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times) | 33.30%         | **Hard**       |
