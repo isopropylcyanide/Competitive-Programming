@@ -265,7 +265,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 79    | [Word Search](https://leetcode.com/problems/word-search)                                                                                                       | 34.90%         | **Medium**     |
 | 1116  | [Print Zero Even Odd](https://leetcode.com/problems/print-zero-even-odd)                                                                                       | 55.70%         | **Medium**     |
 | 297   | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)                                                   | 47.10%         | **Hard**       |
-| 4     | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)                                                                       | 29.40%         | **Hard**       |
+| 4     | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)                                                                       | 29.40%         | **Hard**       | :white_check_mark: |
 | 134   | [Gas Station](https://leetcode.com/problems/gas-station)                                                                                                       | 38.20%         | **Medium**     |
 | 207   | [Course Schedule](https://leetcode.com/problems/course-schedule)                                                                                               | 42.80%         | **Medium**     | :white_check_mark: |
 | 445   | [Add Two Numbers II](https://leetcode.com/problems/add-two-numbers-ii)                                                                                         | 54.30%         | **Medium**     |
