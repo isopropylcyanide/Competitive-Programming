@@ -1,38 +1,29 @@
-package com.random.aman;
-
+import java.util.ArrayList;
 import java.util.BitSet;
+import java.util.List;
 
-public class TicTacToeBitsetNoSpace {
+public class TicTacToeBitset {
 
     //maintain two flattened bitsets corresponding to the game;
     private final BitSet player1Game;
     private final BitSet player2Game;
+    private final List<BitSet> winningPositions;
     private final int boardSize;
 
-    public TicTacToeBitsetNoSpace(int n) {
+    public TicTacToeBitset(int n) {
         this.boardSize = n;
         this.player1Game = new BitSet(n);
         this.player2Game = new BitSet(n);
+        this.winningPositions = getWinningPositions();
     }
 
-    public int move(int row, int col, int player) {
-        int flatPos = boardSize * row + col;
-        BitSet game = player == 1 ? player1Game : player2Game;
-        game.set(flatPos);
-        if (game.cardinality() < boardSize) {
-            return 0;
-        }
-        return checkGameAgainstWinningPositions(game) ? player : 0;
-    }
-
-    private boolean checkGameAgainstWinningPositions(BitSet game) {
+    private List<BitSet> getWinningPositions() {
         //for horizontal victory,
+        List<BitSet> winningPositions = new ArrayList<>();
         for (int i = 0; i + boardSize <= boardSize * boardSize; i += boardSize) {
             BitSet set = new BitSet();
             set.set(i, i + boardSize);
-            if (isGameWinning(game, set)) {
-                return true;
-            }
+            winningPositions.add(set);
         }
         //for vertical victory
         for (int i = 0; i < boardSize; i++) {
@@ -40,9 +31,7 @@ public class TicTacToeBitsetNoSpace {
             for (int j = i; j <= boardSize * boardSize - 1; j = j + boardSize) {
                 set.set(j);
             }
-            if (isGameWinning(game, set)) {
-                return true;
-            }
+            winningPositions.add(set);
         }
         //for diagonal victory: left
         BitSet leftDiagonal = new BitSet();
@@ -51,23 +40,34 @@ public class TicTacToeBitsetNoSpace {
             leftDiagonal.set(i * boardSize + i);
             rightDiagonal.set(i * boardSize + boardSize - 1 - i);
         }
-        if (isGameWinning(game, leftDiagonal)) {
-            return true;
-        }
-        if (isGameWinning(game, rightDiagonal)) {
-            return true;
+        winningPositions.add(leftDiagonal);
+        winningPositions.add(rightDiagonal);
+        return winningPositions;
+    }
+
+    private boolean isWinningPosition(int player) {
+        BitSet game = player == 1 ? player1Game : player2Game;
+        for (BitSet winningPosition : winningPositions) {
+            BitSet _game = (BitSet) game.clone();
+            _game.and(winningPosition);
+            if (_game.equals(winningPosition)) {
+                System.out.println("Found a winning game " + _game + " for position " + winningPosition);
+                return true;
+            }
         }
         return false;
     }
 
-    private boolean isGameWinning(BitSet game, BitSet winningPosition) {
-        BitSet _game = (BitSet) game.clone();
-        _game.and(winningPosition);
-        if (_game.equals(winningPosition)) {
-            System.out.println("Found a winning game " + _game + " for position " + winningPosition);
-            return true;
+    public int move(int row, int col, int player) {
+        int flatPos = boardSize * row + col;
+        BitSet game = player == 1 ? player1Game : player2Game;
+        game.set(flatPos);
+        if (game.cardinality() < boardSize) {
+            //there's no way we can win
+            return 0;
         }
-        return false;
+//        printGame();
+        return isWinningPosition(player) ? player : 0;
     }
 
     private void printGame() {
@@ -78,7 +78,7 @@ public class TicTacToeBitsetNoSpace {
     }
 
     public static void main(String[] args) {
-        TicTacToeBitsetNoSpace ticTacToe = new TicTacToeBitsetNoSpace(3);
+        TicTacToeBitset ticTacToe = new TicTacToeBitset(3);
         System.out.println(ticTacToe.move(0, 0, 1)); // return 0 (no one wins)
         System.out.println(ticTacToe.move(0, 2, 2)); // return 0 (no one wins)
         System.out.println(ticTacToe.move(2, 2, 1)); // return 0 (no one wins)

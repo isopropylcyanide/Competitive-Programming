@@ -1,5 +1,3 @@
-package com.random.aman;
-
 public class TicTacToe {
 
     private final char[][] game;

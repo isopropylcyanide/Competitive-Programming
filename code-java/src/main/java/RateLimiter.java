@@ -1,5 +1,3 @@
-package com.atlassian.coding.ratelimiter;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,27 +10,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class Driver {
+public class RateLimiter {
 
     public static void main(String[] args) {
-        RateLimiter rateLimiter = RateLimiterFactory.withTokenBucket("atlassian-3p", 10);
+        InMemoryRateLimiter rateLimiter = RateLimiterFactory.withTokenBucket("atlassian-3p", 10);
     }
 
     public static class RateLimiterFactory {
 
-        public static RateLimiter withTokenBucket(String customerId, int maxRequests) {
-            return new RateLimiter.TokenBucketRateLimiter(maxRequests, customerId);
+        public static InMemoryRateLimiter withTokenBucket(String customerId, int maxRequests) {
+            return new InMemoryRateLimiter.TokenBucketRateLimiter(maxRequests, customerId);
         }
-
     }
 
-    public abstract static class RateLimiter {
+    public abstract static class InMemoryRateLimiter {
 
         protected final int maxRequestsPerSec;
         private final String customerId;
         private final String rateLimiterId;
 
-        protected RateLimiter(int maxRequestsPerSec, String customerId) {
+        protected InMemoryRateLimiter(int maxRequestsPerSec, String customerId) {
             this.maxRequestsPerSec = maxRequestsPerSec;
             this.customerId = customerId;
             this.rateLimiterId = UUID.randomUUID().toString();
@@ -62,7 +59,7 @@ public class Driver {
 
         abstract public long getLastAccessTime();
 
-        public static class TokenBucketRateLimiter extends RateLimiter {
+        public static class TokenBucketRateLimiter extends InMemoryRateLimiter {
 
             private int tokens;
             private long lastRequestTime;
@@ -128,7 +125,7 @@ public class Driver {
 
     static class TokenBucketRateLimiterTest {
 
-        private RateLimiter rateLimiter;
+        private InMemoryRateLimiter rateLimiter;
 
         @BeforeEach
         void setUp() {
@@ -136,7 +133,7 @@ public class Driver {
 
         @Test
         void testAllowWhenYouHaveSufficientTokens() {
-            rateLimiter = new RateLimiter.TokenBucketRateLimiter(3, "C1");
+            rateLimiter = new InMemoryRateLimiter.TokenBucketRateLimiter(3, "C1");
             assertTrue(rateLimiter.allow());
             assertTrue(rateLimiter.allow());
             assertTrue(rateLimiter.allow());
@@ -145,7 +142,7 @@ public class Driver {
 
         @Test
         void testAllowWhenYouHaveSufficientTokensWithDelay() throws InterruptedException {
-            rateLimiter = new RateLimiter.TokenBucketRateLimiter(3, "C1");
+            rateLimiter = new InMemoryRateLimiter.TokenBucketRateLimiter(3, "C1");
             assertTrue(rateLimiter.allow());
             assertTrue(rateLimiter.allow());
             assertTrue(rateLimiter.allow());
@@ -156,7 +153,7 @@ public class Driver {
 
         @Test
         void testRateLimiterAcrossSingleThread() throws InterruptedException {
-            rateLimiter = new RateLimiter.TokenBucketRateLimiter(3, "C1");
+            rateLimiter = new InMemoryRateLimiter.TokenBucketRateLimiter(3, "C1");
             CountDownLatch latch = new CountDownLatch(1);
             AtomicLong failed = new AtomicLong(0);
 
@@ -179,7 +176,7 @@ public class Driver {
 
         @Test
         void testRateLimiterAcrossSingleThreadFailsWhenTokensDoNotExist() throws InterruptedException {
-            rateLimiter = new RateLimiter.TokenBucketRateLimiter(1, "C1");
+            rateLimiter = new InMemoryRateLimiter.TokenBucketRateLimiter(1, "C1");
             CountDownLatch latch = new CountDownLatch(1);
             AtomicLong failed = new AtomicLong(0);
 
@@ -199,7 +196,7 @@ public class Driver {
 
         @Test
         void testRateLimiterAcrossMultipleThreads() throws InterruptedException {
-            rateLimiter = new RateLimiter.TokenBucketRateLimiter(3, "C1");
+            rateLimiter = new InMemoryRateLimiter.TokenBucketRateLimiter(3, "C1");
             CountDownLatch latch = new CountDownLatch(2);
             AtomicLong failed = new AtomicLong(0);
 

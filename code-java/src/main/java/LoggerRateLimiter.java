@@ -1,5 +1,3 @@
-package com.random.aman;
-
 import java.util.HashMap;
 import java.util.Map;
 

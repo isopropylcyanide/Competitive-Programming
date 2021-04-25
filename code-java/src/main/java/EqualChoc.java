@@ -1,20 +1,22 @@
-import java.util.*;
-import java.lang.*;
-import java.math.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
-class equalChoc{
+class EqualChoc {
     static private int N;
     static private ArrayList<Integer> A;
 
-    static void solve(){
+    static void solve() {
         // Distribute equal chocolates to all in minimum moves
         int min = Collections.min(A), r = Integer.MAX_VALUE;
-        for (int t = min - 4; t <= min; t++){
+        for (int t = min - 4; t <= min; t++) {
             int s = 0;
-            for (int i = 0; i < A.size(); i++){
+            for (int i = 0; i < A.size(); i++) {
                 int D = A.get(i) - t;
-                s += D/ 5; D %= 5;
-                s += D/ 2; D %= 2;
+                s += D / 5;
+                D %= 5;
+                s += D / 2;
+                D %= 2;
                 s += D;
             }
             r = Math.min(r, s);
@@ -29,7 +31,7 @@ class equalChoc{
         testcases = s.nextInt();
         A = new ArrayList<Integer>();
 
-        while (testcases -- > 0){
+        while (testcases-- > 0) {
             A.clear();
             N = s.nextInt();
             for (int i = 0; i < N; i++)

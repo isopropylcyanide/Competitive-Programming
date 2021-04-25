@@ -1,34 +1,32 @@
 /* IMPORTANT: Multiple classes and nested static classes are supported */
 
 //imports for BufferedReader
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-import java.util.*;
+class ChainAlpha {
 
-class chainAlpha {
-
-
-    public static void main(String args[] ) throws Exception {
+    public static void main(String args[]) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
 
-        while (T-- > 0){
+        while (T-- > 0) {
             String s = br.readLine();
             char nextChar = 'a';
             int pos = -1;
             int len = 0, i = 0;
             int flag = 0;
 
-            while (nextChar != '{'){
-                if (s.charAt(i) == nextChar){
+            while (nextChar != '{') {
+                if (s.charAt(i) == nextChar) {
                     if (pos == -1)
                         pos = i;
-                    else{
+                    else {
                         len += (i - pos);
                         pos = i;
                     }
-                    nextChar ++;
+                    nextChar++;
                 }
                 i += 1;
             }

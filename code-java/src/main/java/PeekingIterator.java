@@ -1,5 +1,3 @@
-package com.random.aman;
-
 import java.util.Arrays;
 import java.util.Iterator;
 

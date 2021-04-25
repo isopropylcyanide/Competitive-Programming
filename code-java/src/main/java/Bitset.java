@@ -1,13 +1,12 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.BitSet;
 
-class Solution {
+class Bitset {
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in) );
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String inp[] = br.readLine().split(" ");
         int N = Integer.parseInt(inp[0]);
@@ -16,9 +15,9 @@ class Solution {
         BitSet b2 = new BitSet(N);
         int a;
 
-        for (int i = 0; i < M; i++){
+        for (int i = 0; i < M; i++) {
             inp = br.readLine().split(" ");
-            switch( inp[0]){
+            switch (inp[0]) {
                 case "AND":
                     a = Integer.parseInt(inp[1]);
                     if (a == 1)

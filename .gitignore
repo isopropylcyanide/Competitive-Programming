@@ -5,3 +5,7 @@ a.out
 .DS_Store
 cmake-build-debug/
 CMakeLists.txt
+code-java/out
+code-java/*.iml
+code-java/target
+

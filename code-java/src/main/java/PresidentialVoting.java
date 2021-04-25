@@ -1,19 +1,13 @@
-package com.atlassian.coding;
-
-import com.google.common.collect.Lists;
-import lombok.ToString;
-import org.apache.commons.collections4.CollectionUtils;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-public class PresidentialVoteMain {
+public class PresidentialVoting {
 
-    @ToString
     static class CandidateVote {
 
         private final String candidateId;
@@ -57,7 +51,7 @@ public class PresidentialVoteMain {
         PriorityQueue<CandidateVote> candidateVoteQueue = new PriorityQueue<>(k, candidateVoteComparator);
 
         final int maxPreferentialVotesPerVoter = 3;
-        for (List<String> preferentialVotes : CollectionUtils.emptyIfNull(votes)) {
+        for (List<String> preferentialVotes : votes) {
             for (int preference = 0; preference < preferentialVotes.size(); preference++) {
                 String candidate = preferentialVotes.get(preference);
                 if (voteCountMap.get(candidate) == null) {
@@ -84,7 +78,7 @@ public class PresidentialVoteMain {
         String maxVotedCandidate = null;
         int maxVotes = 0;
 
-        for (String vote : CollectionUtils.emptyIfNull(votes)) {
+        for (String vote : votes) {
             voteCountMap.putIfAbsent(vote, 0);
             int newVotesForCandidate = voteCountMap.get(vote) + 1;
             voteCountMap.put(vote, newVotesForCandidate);
@@ -111,12 +105,13 @@ public class PresidentialVoteMain {
 
     public static void main(String[] args) {
 
-        List<List<String>> votes = Lists.newArrayList(
-                Lists.newArrayList("A", "B", "C"),
-                Lists.newArrayList("B", "C")
-//                Lists.newArrayList("B", "A"),
+        List<List<String>> votes = new ArrayList<>(
+                Arrays.asList(
+                        new ArrayList<>(Arrays.asList("A", "B", "C")),
+                        new ArrayList<>(Arrays.asList("B", "C"))
+                )
         );
-        String topCandidate = PresidentialVoteMain.getTopKCandidateWithPreference(votes, 1);
+        String topCandidate = PresidentialVoting.getTopKCandidateWithPreference(votes, 1);
         System.out.println("Top: " + topCandidate);
 
 //        List<String> votes = Arrays.asList("A", "B", "A", "C", "D", "B", "A");
