@@ -108,6 +108,16 @@ LL divisors(LL N){
     return ans;
 }
 
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
+
 int main(){
     sieve();
     int T;

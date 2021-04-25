@@ -25,6 +25,16 @@ void sieve_min_prime(){
     }
 }
 
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
+
 ll solveDP(){
     //O(n2) solution
     vector<ll> dp(N, 1);

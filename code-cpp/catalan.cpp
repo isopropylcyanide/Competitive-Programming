@@ -16,7 +16,7 @@ using namespace std;
  
 
 int numTrees(int n) {
-        if(n == 0) return ;
+        if(n == 0) return 0 ;
         
         if(n == 1) return 1;
         

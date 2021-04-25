@@ -65,7 +65,7 @@ int shortestPathAllKeys(vector<string>& grid) {
         //if we have a better solution
         //if the bitset is reached, we are good
         int ans = top.second;
-        bitset b = top.first.second;
+        bitset<6> b = top.first.second;
         int i = top.first.first.first;
         int j = top.first.first.second;
         std::cout << " At [" << i << "," << j << "] : {" << grid[i][j] << "} with Bitset " << b << " with steps: " << ans << endl;
@@ -89,7 +89,7 @@ int shortestPathAllKeys(vector<string>& grid) {
                         //can potentially visit
                         //if lower, collect key
                         else if (keys.find(ch) != keys.end()) {
-                            bitset newBitset = b;
+                            bitset<6> newBitset = b;
                             newBitset.set(getBit(ch));
                             q.push(mp(mp(mp(new_i, new_j), newBitset), ans + 1));
 

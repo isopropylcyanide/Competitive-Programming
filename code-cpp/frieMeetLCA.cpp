@@ -82,6 +82,16 @@ ll lca_sqrt(ll u, ll v){
     return u ; //Either u or v store the lca.
 }
 
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
+
 int main(){
     scanf("%lld", &T);
 
@@ -133,7 +143,5 @@ int main(){
         num /= _g, deno /= _g;
         printf("%lld %lld\n",num, deno);
     }
-
-
     return 0;
 }

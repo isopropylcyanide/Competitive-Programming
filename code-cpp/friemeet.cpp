@@ -43,6 +43,17 @@ void dfs(ll i, ll par, ll lvl){
     }
 }
 
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
+
+
 int main(){
     scanf("%lld", &T);
 

@@ -35,6 +35,17 @@ llu countPrimeFactors(llu a){
     return uniquePrime.size();
 }
 
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
+
+
 int main(){
     ios:: sync_with_stdio(false);
 

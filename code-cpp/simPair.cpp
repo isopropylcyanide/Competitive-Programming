@@ -28,7 +28,7 @@ public:
                 b.resize(BIT_size,0);
 
         }
-        void display(){w
+        void display(){
                 for (auto a1 : b)
                         cout << " -> "<<a1;
                 cout << endl;

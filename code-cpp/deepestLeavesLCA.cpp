@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <map>
+#include <cmath>
 
 struct TreeNode {
     int val;
@@ -9,7 +12,9 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-map<TreeNode *, int> depth;
+int max(int first, int second);
+
+std::map<TreeNode *, int> depth;
 
 int calculateDepths(TreeNode *root) {
     if (root == NULL) {
@@ -24,6 +29,10 @@ int calculateDepths(TreeNode *root) {
     int depthHere = 1 + max(depthLeft, depthRight);
     depth[root] = depthHere;
     return depthHere;
+}
+
+int max(int first, int second) {
+    return first > second ? first : second;
 }
 
 int getDepth(TreeNode *node) {
@@ -67,6 +76,6 @@ int main() {
     root->right->left = new TreeNode(0);
     root->right->right = new TreeNode(8);
     TreeNode *deepest = lcaDeepestLeaves(root);
-    std::cout << "Deepest: " << deepest->val << endl;
+    std::cout << "Deepest: " << deepest->val << std::endl;
     return 0;
 }

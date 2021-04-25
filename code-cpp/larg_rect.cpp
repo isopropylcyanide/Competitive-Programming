@@ -14,7 +14,8 @@ int main() {
     stack<int> st;
     int tos, max_area, new_area;
 
-    for (int i = 1; i <= N; i++) {
+    int i = 1;
+    for (; i <= N; i++) {
         if (st.empty() || H[st.top()] <= H[i])
             st.push(i);
         else {
@@ -32,7 +33,7 @@ int main() {
         new_area = H[tos] * ((st.empty() ? i : i - st.top() - 1));
 
         if (max_area < new_area)
-            max_area = new_area
+            max_area = new_area;
     }
 
     cout << max_area << endl;

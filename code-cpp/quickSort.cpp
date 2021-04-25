@@ -7,7 +7,7 @@ vector<int> A;
 
 inline void display(vector<int> &X){
     stack<int> k;
-    k.push(2));
+    k.push(2);
 
     cout << endl;
     for (auto a : X)

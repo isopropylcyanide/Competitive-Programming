@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include <iostream>
+#include <algorithm>
 #define MAX  500005
 #define inf 0x7fffffff
 using namespace std;
@@ -8,6 +9,16 @@ typedef long long int ll;
 
 //Q Queries. Increment A by K and find the absolute sum
 ll N, Q, temp,K;
+
+int __gcd(int a, int b){
+    if (a < b){
+        return __gcd(b, a);
+    }
+    if (b == 0){
+        return a;
+    }
+    return __gcd(b, a % b);
+}
 
 void solve(vector<ll> & A, const ll & N){
 
@@ -40,6 +51,7 @@ void solve(vector<ll> & A, const ll & N){
     cout <<"\n\nballs: "<<balls<<endl;
 
 }
+
 
 int main(){
     ios::sync_with_stdio(false);
