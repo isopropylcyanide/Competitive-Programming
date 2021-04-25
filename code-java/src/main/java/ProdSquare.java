@@ -1,31 +1,31 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-class prodSquare{
+class ProdSquare {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int [] A = new int[N];
+        int[] A = new int[N];
         for (int i = 0; i < N; i++)
             A[i] = Integer.parseInt(br.readLine());
 
         float total = N * (N - 1);
         int count = 0, number = 0;
-        HashMap<Integer, Integer> m = new HashMap<Integer,Integer>();
+        HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
 
-        for(int i = 0; i < N; i++){
+        for (int i = 0; i < N; i++) {
             int numC = A[i];
-            if (m.containsKey(numC)){
+            if (m.containsKey(numC)) {
                 count += m.get(numC);
                 continue;
             }
             int subNum = 0;
-            for (int j = 0; j < N; j++){
-                if (j != i){
+            for (int j = 0; j < N; j++) {
+                if (j != i) {
                     number = numC * A[j];
-                    if(Math.round(Math.sqrt(number))==Math.sqrt(number)){
+                    if (Math.round(Math.sqrt(number)) == Math.sqrt(number)) {
                         count += 1;
                         subNum += 1;
                     }
@@ -34,6 +34,6 @@ class prodSquare{
             m.put(numC, subNum);
         }
 
-        System.out.println(String.format("%6f",count/total));
+        System.out.println(String.format("%6f", count / total));
     }
 }
