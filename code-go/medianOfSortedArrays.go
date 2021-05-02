@@ -6,35 +6,28 @@ import (
 )
 
 type XYPoint struct {
-	max_x_left  int
-	min_x_right int
-	max_y_left  int
-	min_y_right int
+	maxXLeft  int
+	minXRight int
+	maxYLeft  int
+	minYRight int
 }
 
-func cond(predicate bool, truthy, falsy int) int {
-	if predicate {
-		return truthy
+func getInterestingElements(a, b []int, aPartIdx, bPartIdx int) *XYPoint {
+	maxXLeft, minXRight := math.MinInt32, math.MaxInt32
+	maxYLeft, minYRight := math.MinInt32, math.MaxInt32
+	if aPartIdx > 0 {
+		maxXLeft = a[aPartIdx-1]
 	}
-	return falsy
-}
-
-func getInterestingElements(a, b []int, a_part_idx, b_part_idx int) *XYPoint {
-	max_x_left, min_x_right := math.MinInt32, math.MaxInt32
-	max_y_left, min_y_right := math.MinInt32, math.MaxInt32
-	if a_part_idx > 0 {
-		max_x_left = a[a_part_idx-1]
+	if aPartIdx < len(a) {
+		minXRight = a[aPartIdx]
 	}
-	if a_part_idx < len(a) {
-		min_x_right = a[a_part_idx]
+	if bPartIdx > 0 {
+		maxYLeft = b[bPartIdx-1]
 	}
-	if b_part_idx > 0 {
-		max_y_left = b[b_part_idx-1]
+	if bPartIdx < len(b) {
+		minYRight = b[bPartIdx]
 	}
-	if b_part_idx < len(b) {
-		min_y_right = b[b_part_idx]
-	}
-	return &XYPoint{max_x_left, min_x_right, max_y_left, min_y_right}
+	return &XYPoint{maxXLeft, minXRight, maxYLeft, minYRight}
 }
 
 func findMedianSortedArrays(a []int, b []int) float64 {
@@ -47,32 +40,32 @@ func findMedianSortedArrays(a []int, b []int) float64 {
 	//optimally partition the array
 	low, high := 0, len(a)
 	for low <= high {
-		a_part_idx := low + (high-low)/2
-		b_part_idx := splitSize - a_part_idx
+		aPartIdx := low + (high-low)/2
+		bPartIdx := splitSize - aPartIdx
 
-		fmt.Printf("\nSplitting a at %d as %v and %v\n", a_part_idx, a[:a_part_idx], a[a_part_idx:])
-		fmt.Printf("Splitting b at %d as %v and %v\n", b_part_idx, b[:b_part_idx], b[b_part_idx:])
-		p := getInterestingElements(a, b, a_part_idx, b_part_idx)
+		fmt.Printf("\nSplitting a at %d as %v and %v\n", aPartIdx, a[:aPartIdx], a[aPartIdx:])
+		fmt.Printf("Splitting b at %d as %v and %v\n", bPartIdx, b[:bPartIdx], b[bPartIdx:])
+		p := getInterestingElements(a, b, aPartIdx, bPartIdx)
 
-		if p.max_x_left <= p.min_y_right && p.max_y_left <= p.min_x_right {
-			fmt.Printf("Found median at index %d \n", a_part_idx)
-			larger_left := math.Max(float64(p.max_x_left), float64(p.max_y_left))
+		if p.maxXLeft <= p.minYRight && p.maxYLeft <= p.minXRight {
+			fmt.Printf("Found median at index %d \n", aPartIdx)
+			largerLeft := math.Max(float64(p.maxXLeft), float64(p.maxYLeft))
 
 			if n%2 == 0 {
 				//even..middle of two larger
-				larger_right := math.Min(float64(p.min_x_right), float64(p.min_y_right))
-				return float64(larger_left+larger_right) / 2.0
+				largerRight := math.Min(float64(p.minXRight), float64(p.minYRight))
+				return (largerLeft + largerRight) / 2.0
 
 			} else {
-				return larger_left
+				return largerLeft
 			}
-		} else if p.max_x_left > p.min_y_right {
+		} else if p.maxXLeft > p.minYRight {
 			//too far right, go left
-			high = a_part_idx - 1
+			high = aPartIdx - 1
 
 		} else {
 			//too far left, go right
-			low = a_part_idx + 1
+			low = aPartIdx + 1
 		}
 	}
 	return 0.0
