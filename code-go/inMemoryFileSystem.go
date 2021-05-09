@@ -116,7 +116,7 @@ func createFileIfNotExists(path string, root *FileSystem, isDirectory bool) *Fil
 	return node
 }
 
-//helper function to split a given path starting with /
+//f function to split a given path starting with /
 //avoids the edge case where the given path is the root itself
 func splitFilePath(path string) []string {
 	if path == "/" {
