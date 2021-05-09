@@ -21,7 +21,7 @@ type FileNode struct {
 	children    map[string]*FileNode
 }
 
-func Constructor() FileSystem {
+func New() FileSystem {
 	return FileSystem{
 		root: &FileNode{
 			name:        "/",
@@ -127,7 +127,7 @@ func splitFilePath(path string) []string {
 }
 
 func main() {
-	fs := Constructor()
+	fs := New()
 	fmt.Println(fs.Ls("/"))
 
 	fs.Mkdir("/a/b/c")

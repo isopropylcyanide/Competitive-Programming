@@ -113,7 +113,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 227   | [Basic Calculator II ](https://leetcode.com/problems/basic-calculator-ii)                                               | 36.70%         | **Medium**     | :white_check_mark: |
 | 79    | [Word Search ](https://leetcode.com/problems/word-search)                                                               | 34.90%         | **Medium**     |
 | 588   | [Design In-Memory File System ](https://leetcode.com/problems/design-in-memory-file-system)                             | 45.30%         | **Hard**       | :white_check_mark: |
-| 460   | [LFU Cache ](https://leetcode.com/problems/lfu-cache)                                                                   | 33.90%         | **Hard**       |
+| 460   | [LFU Cache ](https://leetcode.com/problems/lfu-cache)                                                                   | 33.90%         | **Hard**       | :white_check_mark: |
 | 239   | [Sliding Window Maximum ](https://leetcode.com/problems/sliding-window-maximum)                                         | 42.80%         | **Hard**       | :white_check_mark: |
 | 348   | [Design Tic-Tac-Toe ](https://leetcode.com/problems/design-tic-tac-toe)                                                 | 54.00%         | **Medium**     |
 | 472   | [Concatenated Words ](https://leetcode.com/problems/concatenated-words)                                                 | 43.30%         | **Hard**       |
@@ -304,7 +304,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 346   | [Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream)                                                               | 70.70%         | **Easy**       |
 | 767   | [Reorganize String](https://leetcode.com/problems/reorganize-string)                                                                                           | 48.30%         | **Medium**     |
 | 706   | [Design HashMap](https://leetcode.com/problems/design-hashmap)                                                                                                 | 60.90%         | **Easy**       |
-| 460   | [LFU Cache](https://leetcode.com/problems/lfu-cache)                                                                                                           | 33.90%         | **Hard**       |
+| 460   | [LFU Cache](https://leetcode.com/problems/lfu-cache)                                                                                                           | 33.90%         | **Hard**       | :white_check_mark: |
 | 277   | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity)                                                                                         | 41.60%         | **Medium**     |
 | 419   | [Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board)                                                                                 | 69.80%         | **Medium**     |
 | 695   | [Max Area of Island](https://leetcode.com/problems/max-area-of-island)                                                                                         | 62.40%         | **Medium**     |
