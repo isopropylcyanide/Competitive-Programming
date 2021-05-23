@@ -89,7 +89,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 2     | [Add Two Numbers ](https://leetcode.com/problems/add-two-numbers)                                                       | 33.70%         | **Medium**     |
 | 937   | [Reorder Data in Log Files ](https://leetcode.com/problems/reorder-data-in-log-files)                                   | 54.30%         | **Easy**       |
 | 42    | [Trapping Rain Water ](https://leetcode.com/problems/trapping-rain-water)                                               | 48.50%         | **Hard**       | :white_check_mark: |
-| 146   | [LRU Cache ](https://leetcode.com/problems/lru-cache)                                                                   | 32.80%         | **Medium**     |
+| 146   | [LRU Cache ](https://leetcode.com/problems/lru-cache)                                                                   | 32.80%         | **Medium**     | :white_check_mark: |
 | 5     | [Longest Palindromic Substring ](https://leetcode.com/problems/longest-palindromic-substring)                           | 29.30%         | **Medium**     |
 | 23    | [Merge k Sorted Lists ](https://leetcode.com/problems/merge-k-sorted-lists)                                             | 39.90%         | **Hard**       | :white_check_mark: |
 | 1192  | [Critical Connections in a Network ](https://leetcode.com/problems/critical-connections-in-a-network)                   | 48.60%         | **Hard**       |
@@ -236,7 +236,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 1239  | [Maximum Length of a Concatenated String with Unique Characters](https://leetcode.com/problems/maximum-length-of-a-concatenated-string-with-unique-characters) | 47.60%         | **Medium**     |
 | 273   | [Integer to English Words](https://leetcode.com/problems/integer-to-english-words)                                                                             | 26.90%         | **Hard**       |
 | 428   | [Serialize and Deserialize N-ary Tree](https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree)                                                     | 59.00%         | **Hard**       |
-| 146   | [LRU Cache](https://leetcode.com/problems/lru-cache)                                                                                                           | 32.80%         | **Medium**     |
+| 146   | [LRU Cache](https://leetcode.com/problems/lru-cache)                                                                                                           | 32.80%         | **Medium**     | :white_check_mark: |
 | 1156  | [Swap For Longest Repeated Character Substring](https://leetcode.com/problems/swap-for-longest-repeated-character-substring)                                   | 48.70%         | **Medium**     |
 | 54    | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix)                                                                                                   | 33.90%         | **Medium**     |
 | 212   | [Word Search II](https://leetcode.com/problems/word-search-ii)                                                                                                 | 34.50%         | **Hard**       |

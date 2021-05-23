@@ -5,33 +5,31 @@ import (
 	"fmt"
 )
 
-/**
-Design and implement a data structure for a Least Frequently Used (LFU) cache.
-When the cache reaches its capacity, it should invalidate and remove the least frequently
-used key before inserting a new item. For this problem, when there is a tie (i.e., two or
-more keys with the same frequency), the least recently used key would be invalidated.
-*/
+// LFUCache Design and implement a data structure for a Least Frequently Used (LFU) cache.
+// When the cache reaches its capacity, it should invalidate and remove the least frequently
+// used key before inserting a new item. For this problem, when there is a tie (i.e., two or
+// more keys with the same frequency), the least recently used key would be invalidated.
 type LFUCache struct {
 	capacity           int
 	size               int
-	_keyEntryLookup    map[int]*entry
+	_keyEntryLookup    map[int]*lfu_entry
 	_freqListLookup    map[int]*list.List
 	minActiveFrequency int
 }
 
-type entry struct {
+type lfu_entry struct {
 	key       int
 	val       int
 	frequency int
-	prev      *entry
-	next      *entry
+	prev      *lfu_entry
+	next      *lfu_entry
 }
 
 func Constructor(capacity int) LFUCache {
 	return LFUCache{
 		capacity:           capacity,
 		size:               0,
-		_keyEntryLookup:    make(map[int]*entry),
+		_keyEntryLookup:    make(map[int]*lfu_entry),
 		_freqListLookup:    make(map[int]*list.List),
 		minActiveFrequency: 0,
 	}
@@ -46,11 +44,11 @@ func (cache *LFUCache) Get(key int) int {
 	}
 }
 
-func (cache *LFUCache) updateEntryStats(entry *entry) {
+func (cache *LFUCache) updateEntryStats(entry *lfu_entry) {
 	nodeFreq := entry.frequency
 	//decrement the node from the freq (always exists) and add it to freq + 1 list (create if exists)
 	if oldList, ok := cache._freqListLookup[nodeFreq]; ok {
-		//if the entry in the old freq list, exists, remove it
+		//if the lfu_entry in the old freq list, exists, remove it
 		oldList.Remove(&list.Element{
 			Value: *entry,
 		})
@@ -63,7 +61,7 @@ func (cache *LFUCache) updateEntryStats(entry *entry) {
 	cache.addEntryToListSafe(entry, entry.frequency)
 }
 
-func (cache *LFUCache) addEntryToListSafe(entry *entry, nodeFreq int) {
+func (cache *LFUCache) addEntryToListSafe(entry *lfu_entry, nodeFreq int) {
 	//checks if the list exists before calling methods on it
 	newFreqList, ok := cache._freqListLookup[nodeFreq]
 	if !ok {
@@ -72,7 +70,7 @@ func (cache *LFUCache) addEntryToListSafe(entry *entry, nodeFreq int) {
 		cache._freqListLookup[nodeFreq].PushFront(entry)
 
 	} else {
-		//it already exists, simply append entry
+		//it already exists, simply append lfu_entry
 		newFreqList.PushFront(entry)
 	}
 }
@@ -93,11 +91,11 @@ func (cache *LFUCache) Put(key, val int) {
 			//need to evict the last element of the list denoted by "minActiveFrequency"
 			mostInactiveList := cache._freqListLookup[cache.minActiveFrequency]
 			if poppedNode := mostInactiveList.Remove(mostInactiveList.Back()); poppedNode != nil {
-				delete(cache._keyEntryLookup, poppedNode.(*entry).key)
+				delete(cache._keyEntryLookup, poppedNode.(*lfu_entry).key)
 			}
 			cache.size -= 1
 		}
-		newEntry := &entry{
+		newEntry := &lfu_entry{
 			key:       key,
 			val:       val,
 			frequency: 1,
