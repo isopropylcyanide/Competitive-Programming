@@ -85,7 +85,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | **#** | **Title**                                                                                                               | **Acceptance** | **Difficulty** | **Finished**       |
 | ----- | ----------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------ |
 | 1     | [Two Sum ](https://leetcode.com/problems/two-sum)                                                                       | 45.50%         | **Easy**       | :white_check_mark: |
-| 200   | [Number of Islands ](https://leetcode.com/problems/number-of-islands)                                                   | 46.50%         | **Medium**     |
+| 200   | [Number of Islands ](https://leetcode.com/problems/number-of-islands)                                                   | 46.50%         | **Medium**     | :white_check_mark: |
 | 2     | [Add Two Numbers ](https://leetcode.com/problems/add-two-numbers)                                                       | 33.70%         | **Medium**     |
 | 937   | [Reorder Data in Log Files ](https://leetcode.com/problems/reorder-data-in-log-files)                                   | 54.30%         | **Easy**       |
 | 42    | [Trapping Rain Water ](https://leetcode.com/problems/trapping-rain-water)                                               | 48.50%         | **Hard**       | :white_check_mark: |
@@ -250,7 +250,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 124   | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                                     | 34.10%         | **Hard**       | :white_check_mark: |
 | 340   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)                     | 43.90%         | **Hard**       |
 | 218   | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem)                                                                                       | 34.40%         | **Hard**       |
-| 200   | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                                           | 46.50%         | **Medium**     |
+| 200   | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                                           | 46.50%         | **Medium**     | :white_check_mark: |
 | 358   | [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart)                                                           | 34.70%         | **Hard**       |
 | 1375  | [Bulb Switcher III](https://leetcode.com/problems/bulb-switcher-iii)                                                                                           | 62.10%         | **Medium**     |
 | 99    | [Recover Binary Search Tree](https://leetcode.com/problems/recover-binary-search-tree)                                                                         | 39.30%         | **Hard**       |
