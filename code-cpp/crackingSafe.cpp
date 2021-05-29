@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+#include <unordered_set>
+
+using namespace std;
 
 bool dfs(string &s, unordered_set<string> &visited, int maxPossible, int n, int k) {
     if (visited.size() == maxPossible) {
@@ -6,10 +11,10 @@ bool dfs(string &s, unordered_set<string> &visited, int maxPossible, int n, int 
     } else {
         for (int i = 0; i < k; i++) {
             // for (int i = k; i >= 0; i--) {
-            //add an edge for each of the k edges
+            // add an edge for each of the k edges
             s.push_back('0' + i);
             string cur = s.substr(s.size() - n);
-            //if the edge before isn't seen, it is of interest to us
+            // if the edge before isn't seen, it is of interest to us
             if (visited.find(cur) == visited.end()) {
                 visited.insert(cur);
 
@@ -18,7 +23,7 @@ bool dfs(string &s, unordered_set<string> &visited, int maxPossible, int n, int 
                 }
                 visited.erase(cur);
             }
-            //remove the new edge
+            // remove the new edge
             s.pop_back();
         }
         return false;

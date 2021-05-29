@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include <vector>
+#include <stack>
+#include <iostream>
 using namespace std;
 #define MAXM 9800   //1200th prime : 9733
 typedef long long unsigned llu;

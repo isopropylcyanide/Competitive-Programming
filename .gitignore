@@ -3,9 +3,13 @@ a.out
 .vscode*
 .idea*
 .DS_Store
-cmake-build-debug/
-CMakeLists.txt
+cmake*
+Makefile *
 code-java/out
 code-java/*.iml
 code-java/target
 code-go/README.md
+Testing
+Makefile
+*.cbp
+bin/
