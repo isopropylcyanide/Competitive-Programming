@@ -170,7 +170,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 158   | [Read N Characters Given Read4 II - Call multiple times ](https://leetcode.com/problems/read-n-characters-given-read4-ii-call-multiple-times) | 33.30%         | **Hard**       |
 | 125   | [Valid Palindrome ](https://leetcode.com/problems/valid-palindrome)                                                                           | 35.80%         | **Easy**       |
 | 636   | [Exclusive Time of Functions ](https://leetcode.com/problems/exclusive-time-of-functions)                                                     | 51.80%         | **Medium**     | :white_check_mark: |
-| 340   | [Longest Substring with At Most K Distinct Characters ](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)   | 43.90%         | **Hard**       |
+| 340   | [Longest Substring with At Most K Distinct Characters ](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)   | 43.90%         | **Hard**       | :white_check_mark: |
 | 621   | [Task Scheduler ](https://leetcode.com/problems/task-scheduler)                                                                               | 48.60%         | **Medium**     |
 | 311   | [Sparse Matrix Multiplication ](https://leetcode.com/problems/sparse-matrix-multiplication)                                                   | 61.50%         | **Medium**     |
 | 523   | [Continuous Subarray Sum ](https://leetcode.com/problems/continuous-subarray-sum)                                                             | 24.60%         | **Medium**     |
@@ -248,7 +248,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 348   | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe)                                                                                         | 54.00%         | **Medium**     |
 | 450   | [Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst)                                                                                     | 42.90%         | **Medium**     |
 | 124   | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum)                                                                     | 34.10%         | **Hard**       | :white_check_mark: |
-| 340   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)                     | 43.90%         | **Hard**       |
+| 340   | [Longest Substring with At Most K Distinct Characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters)                     | 43.90%         | **Hard**       | :white_check_mark: |
 | 218   | [The Skyline Problem](https://leetcode.com/problems/the-skyline-problem)                                                                                       | 34.40%         | **Hard**       |
 | 200   | [Number of Islands](https://leetcode.com/problems/number-of-islands)                                                                                           | 46.50%         | **Medium**     | :white_check_mark: |
 | 358   | [Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart)                                                           | 34.70%         | **Hard**       |
