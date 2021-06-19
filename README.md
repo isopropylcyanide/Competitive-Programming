@@ -145,7 +145,7 @@ As such they lack comments and proper documentation. However, you can use it as 
 | 273   | [Integer to English Words ](https://leetcode.com/problems/integer-to-english-words)                                                           | 26.90%         | **Hard**       |
 | 953   | [Verifying an Alien Dictionary ](https://leetcode.com/problems/verifying-an-alien-dictionary)                                                 | 54.30%         | **Easy**       |
 | 560   | [Subarray Sum Equals K ](https://leetcode.com/problems/subarray-sum-equals-k)                                                                 | 43.90%         | **Medium**     |
-| 1249  | [Minimum Remove to Make Valid Parentheses ](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)                           | 62.40%         | **Medium**     |
+| 1249  | [Minimum Remove to Make Valid Parentheses ](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)                           | 62.40%         | **Medium**     | :white_check_mark: |
 | 269   | [Alien Dictionary ](https://leetcode.com/problems/alien-dictionary)                                                                           | 33.30%         | **Hard**       |
 | 973   | [K Closest Points to Origin ](https://leetcode.com/problems/k-closest-points-to-origin)                                                       | 63.60%         | **Medium**     |
 | 31    | [Next Permutation ](https://leetcode.com/problems/next-permutation)                                                                           | 32.50%         | **Medium**     | :white_check_mark: |
