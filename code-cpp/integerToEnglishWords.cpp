@@ -141,6 +141,7 @@ int main() {
     std::cout << "483647 :" << numberToWords(483647) << std::endl;
     std::cout << "7483647 :" << numberToWords(7483647) << std::endl;
     std::cout << "47483647 :" << numberToWords(47483647) << std::endl;
+    std::cout << "12300009 :" << numberToWords(12300009) << std::endl;
     std::cout << "147483647 :" << numberToWords(147483647) << std::endl;
     std::cout << "2147483647 :" << numberToWords(2147483647) << std::endl;
     return 0;

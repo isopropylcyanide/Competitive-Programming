@@ -8,6 +8,7 @@ Makefile *
 code-java/out
 code-java/*.iml
 code-java/target
+code-cpp/README.md
 code-go/README.md
 Testing
 Makefile
