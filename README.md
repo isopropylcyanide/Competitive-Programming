@@ -103,7 +103,7 @@ This repository has working programs that were submitted during competitions as 
 | 139   | [Word Break ](https://leetcode.com/problems/word-break)                                                                 | 39.80%         | **Medium**     |
 | 253   | [Meeting Rooms II ](https://leetcode.com/problems/meeting-rooms-ii)                                                     | 45.60%         | **Medium**     |
 | 297   | [Serialize and Deserialize Binary Tree ](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)           | 47.10%         | **Hard**       |
-| 49    | [Group Anagrams ](https://leetcode.com/problems/group-anagrams)                                                         | 56.40%         | **Medium**     |
+| 49    | [Group Anagrams ](https://leetcode.com/problems/group-anagrams)                                                         | 56.40%         | **Medium**     | :white_check_mark: |
 | 763   | [Partition Labels ](https://leetcode.com/problems/partition-labels)                                                     | 75.60%         | **Medium**     |
 | 127   | [Word Ladder ](https://leetcode.com/problems/word-ladder)                                                               | 29.20%         | **Medium**     | :white_check_mark: |
 | 138   | [Copy List with Random Pointer ](https://leetcode.com/problems/copy-list-with-random-pointer)                           | 35.80%         | **Medium**     |
@@ -313,7 +313,7 @@ This repository has working programs that were submitted during competitions as 
 | 75    | [Sort Colors](https://leetcode.com/problems/sort-colors)                                                                                                       | 47.10%         | **Medium**     | :white_check_mark: |
 | 457   | [Circular Array Loop](https://leetcode.com/problems/circular-array-loop)                                                                                       | 29.20%         | **Medium**     |
 | 557   | [Reverse Words in a String III](https://leetcode.com/problems/reverse-words-in-a-string-iii)                                                                   | 69.50%         | **Easy**       |
-| 49    | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                                                                                 | 56.40%         | **Medium**     |
+| 49    | [Group Anagrams](https://leetcode.com/problems/group-anagrams)                                                                                                 | 56.40%         | **Medium**     | :white_check_mark: |
 | 98    | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)                                                                       | 27.70%         | **Medium**     |
 | 679   | [24 Game](https://leetcode.com/problems/24-game)                                                                                                               | 46.10%         | **Hard**       |
 | 1044  | [Longest Duplicate Substring](https://leetcode.com/problems/longest-duplicate-substring)                                                                       | 32.00%         | **Hard**       |
