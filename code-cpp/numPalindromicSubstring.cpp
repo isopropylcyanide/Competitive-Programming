@@ -3,17 +3,16 @@
 using namespace std;
 
 /**
- * Given a string s, return the longest palindromic substring in s.
+ * Given a string s, return the number of palindromic substrings in it.
  */
 
-string countSubstrings(string s) {
-    // to see if s1...sn is valid, we check if s[s1] == s[sn] && {s2..sn-1} is a palindrome
-    // we denote 0 initially, for all. if found to be a palindrome, that cell marks it as one
-    // and updates the bounds. later we can get the bounds
+int countSubstrings(string s) {
+    // Essentially same as finding the longest palindromic substring,
+    // but this time, we keep a counter
     if (s.empty()) {
-        return "";
+        return 0;
     }
-    int n = s.size(), leftBound = 0, maxLength = 1;
+    int n = s.size(), counter = 0;
     bool dp[n + 1][n + 1];
     memset(dp, false, (n + 1) * (n + 1) * sizeof(bool));
 
@@ -24,6 +23,7 @@ string countSubstrings(string s) {
             if (x == y) {
                 // base case
                 dp[x][y] = true;
+                counter += 1;
                 // no need to update the bound meh..
             } else {
                 if (s[x] == s[y]) {
@@ -32,23 +32,19 @@ string countSubstrings(string s) {
                     if (x + 1 > y - 1 || dp[x + 1][y - 1]) {
                         // this is a palindrome too
                         dp[x][y] = true;
-                        if (maxLength < (y - x + 1)) {
-                            maxLength = y - x + 1;
-                            leftBound = x;
-                        }
-                        std::cout << "Found a palindrome : " << s.substr(x, y - x + 1) << endl;
+                        counter += 1;
                     }
                 }
             }
         }
     }
 
-    return s.substr(leftBound, maxLength);
+    return counter;
 }
 
 int main() {
-    std::cout << countSubstrings("babad") << std::endl;
-    std::cout << countSubstrings("cbbd") << std::endl;
+    std::cout << countSubstrings("abc") << std::endl;
+    std::cout << countSubstrings("aaa") << std::endl;
     std::cout << countSubstrings("a") << std::endl;
     std::cout << countSubstrings("ac") << std::endl;
     std::cout << countSubstrings("racecar") << std::endl;
