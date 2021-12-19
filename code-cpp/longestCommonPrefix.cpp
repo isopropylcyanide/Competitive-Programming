@@ -10,6 +10,7 @@ using namespace std;
 string longestCommonPrefix(vector<string> &strs) {
     string prefix = "";
     int maxIdx = -1;
+    strstr()
     int minLength = std::min_element(strs.begin(), strs.end())->size();
     int numStr = strs.size();
 
