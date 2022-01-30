@@ -224,7 +224,7 @@ This repository has working programs that were submitted during competitions as 
 | 254   | [Factor Combinations ](https://leetcode.com/problems/factor-combinations)                                     | 44.70%         | **Medium**     |
 | 380   | [Insert Delete GetRandom O(1) ](https://leetcode.com/problems/insert-delete-getrandom-o1)                     | 43.30%         | **Medium**     |
 | 68    | [Text Justification ](https://leetcode.com/problems/text-justification)                                       | 23.90%         | **Hard**       | :white_check_mark: |
-| 366   | [Find Leaves of Binary Tree ](https://leetcode.com/problems/find-leaves-of-binary-tree)                       | 66.50%         | **Medium**     |
+| 366   | [Find Leaves of Binary Tree ](https://leetcode.com/problems/find-leaves-of-binary-tree)                       | 66.50%         | **Medium**     | :white_check_mark: |
 | 605   | [Can Place Flowers ](https://leetcode.com/problems/can-place-flowers)                                         | 31.10%         | **Easy**       |
 
 ## Microsoft
