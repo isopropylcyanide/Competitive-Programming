@@ -158,7 +158,7 @@ This repository has working programs that were submitted during competitions as 
 | 301   | [Remove Invalid Parentheses ](https://leetcode.com/problems/remove-invalid-parentheses)                                                       | 43.10%         | **Hard**       |
 | 986   | [Interval List Intersections ](https://leetcode.com/problems/interval-list-intersections)                                                     | 67.20%         | **Medium**     |
 | 173   | [Binary Search Tree Iterator ](https://leetcode.com/problems/binary-search-tree-iterator)                                                     | 56.10%         | **Medium**     |
-| 987   | [Vertical Order Traversal of a Binary Tree ](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree)                         | 35.40%         | **Medium**     |
+| 987   | [Vertical Order Traversal of a Binary Tree ](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree)                         | 35.40%         | **Hard**     | :white_check_mark: |
 | 236   | [Lowest Common Ancestor of a Binary Tree ](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)                             | 45.20%         | **Medium**     | :white_check_mark: |
 | 67    | [Add Binary ](https://leetcode.com/problems/add-binary)                                                                                       | 44.10%         | **Easy**       |
 | 543   | [Diameter of Binary Tree ](https://leetcode.com/problems/diameter-of-binary-tree)                                                             | 48.30%         | **Easy**       |
