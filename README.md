@@ -283,7 +283,7 @@ This repository has working programs that were submitted during competitions as 
 | 155   | [Min Stack](https://leetcode.com/problems/min-stack)                                                                                                           | 44.20%         | **Easy**       |
 | 621   | [Task Scheduler](https://leetcode.com/problems/task-scheduler)                                                                                                 | 48.60%         | **Medium**     |
 | 432   | [All O`one Data Structure](https://leetcode.com/problems/all-oone-data-structure)                                                                              | 32.20%         | **Hard**       |
-| 285   | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst)                                                                             | 40.00%         | **Medium**     |
+| 285   | [Inorder Successor in BST](https://leetcode.com/problems/inorder-successor-in-bst)                                                                             | 40.00%         | **Medium**     | :white_check_mark: |
 | 240   | [Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii)                                                                                   | 43.10%         | **Medium**     |
 | 636   | [Exclusive Time of Functions](https://leetcode.com/problems/exclusive-time-of-functions)                                                                       | 51.80%         | **Medium**     | :white_check_mark: |
 | 510   | [Inorder Successor in BST II](https://leetcode.com/problems/inorder-successor-in-bst-ii)                                                                       | 57.90%         | **Medium**     |
