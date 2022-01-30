@@ -2,6 +2,7 @@
 
 /*
  * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+ * Parent information is available against each node
  */
 
 class Node {
@@ -25,7 +26,13 @@ public:
 };
 
 Node *lowestCommonAncestor(Node *p, Node *q) {
-    return p;
+    Node *pPar = p;
+    Node *qPar = q;
+    while (pPar != qPar) {
+        pPar = pPar == nullptr ? q : pPar->parent;
+        qPar = qPar == nullptr ? p : qPar->parent;
+    }
+    return pPar;
 }
 
 int main() {
@@ -43,6 +50,16 @@ int main() {
     root->right->NodeLeft(0);
     root->right->NodeRight(8);
 
+    // 5 4 = 5
     std::cout << lowestCommonAncestor(root->left, root->left->right->right)->val << std::endl;
+
+    // 7 4 = 2
+    std::cout << lowestCommonAncestor(root->left->right->left, root->left->right->right)->val << std::endl;
+
+    // 7 8 = 3
+    std::cout << lowestCommonAncestor(root->left->right->left, root->right->right)->val << std::endl;
+
+    // 3 5 = 3
+    std::cout << lowestCommonAncestor(root->right, root)->val << std::endl;
     return 0;
 }
