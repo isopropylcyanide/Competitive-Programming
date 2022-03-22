@@ -164,3 +164,37 @@ func TestSolveWithMove(t *testing.T) {
 		assert.Equal(t, tc.want, result)
 	}
 }
+
+func TestSolveWithFlatInput(t *testing.T) {
+	cases := []struct {
+		game string
+		want GameResultType
+	}{
+		{
+			game: "XEXEXOOOO",
+			want: PlayerOWinner,
+		},
+		{
+			game: "XEOEXEEOX",
+			want: Incomplete,
+		},
+		{
+			game: "OXOOOXXOX",
+			want: NoResult,
+		},
+		{
+			game: "XXOXXOOOX",
+			want: PlayerXWinner,
+		},
+	}
+
+	for _, tc := range cases {
+		game := NewGame(3)
+		if !game.FromFlatInput(tc.game) {
+			assert.Equal(t, tc.want, Invalid)
+			return
+		}
+		result := game.Solve()
+		assert.Equal(t, tc.want, result)
+	}
+}

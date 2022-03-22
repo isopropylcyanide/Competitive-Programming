@@ -97,6 +97,10 @@ func (g *Game) Solve() GameResultType {
 	return g.solveBitSet()
 }
 
+// FromFlatInput parses input of the form
+//	"X", "", "X",
+//	"", "X", "",
+//	"O", "O", "O",
 func (g *Game) FromInput(input []string) bool {
 	for ind, val := range input {
 		if val == "X" {
@@ -108,6 +112,22 @@ func (g *Game) FromInput(input []string) bool {
 		}
 	}
 	return true
+}
+
+// FromFlatInput parses input of the form "XEOEXEEOX"
+func (g *Game) FromFlatInput(input string) bool {
+	inp := make([]string, 9)
+
+	for ind, s := range input {
+		if s == 'X' {
+			inp[ind] = "X"
+		} else if s == 'O' {
+			inp[ind] = "O"
+		} else {
+			inp[ind] = ""
+		}
+	}
+	return g.FromInput(inp)
 }
 
 func (g *Game) solveBitSet() GameResultType {
