@@ -93,7 +93,7 @@ func convertDumb(s string, numRows int) string {
 
 func main() {
 	fmt.Println(convert("PAYPALISHIRING", 4))
-	// fmt.Println(convert("PAYPALISHIRING", 3))
-	// fmt.Println(convert("PAYPALISHIRING", 2))
-	// fmt.Println(convert("PAYPALISHIRING", 1))
+	fmt.Println(convert("PAYPALISHIRING", 3))
+	fmt.Println(convert("PAYPALISHIRING", 2))
+	fmt.Println(convert("PAYPALISHIRING", 1))
 }
