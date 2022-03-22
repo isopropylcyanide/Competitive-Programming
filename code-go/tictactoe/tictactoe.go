@@ -6,9 +6,11 @@ import (
 	"strings"
 )
 
-type GameSolver struct {
+type Game struct {
 	boardSize    int
 	winningHands []*bitset
+	playerXHand  *bitset
+	playerOHand  *bitset
 }
 
 type GameResultType int
@@ -21,10 +23,12 @@ const (
 	Invalid
 )
 
-func NewGameSolver(boardSize int) *GameSolver {
-	return &GameSolver{
+func NewGame(boardSize int) *Game {
+	return &Game{
 		boardSize:    boardSize,
 		winningHands: getWinningHands(boardSize),
+		playerXHand:  newBitset(),
+		playerOHand:  newBitset(),
 	}
 }
 
@@ -65,40 +69,54 @@ func (bs *bitset) Matches(other *bitset) bool {
 	return bs.b.Cmp(and) == 0
 }
 
-func (s *GameSolver) Solve(input []string) GameResultType {
-	// create bitset for each player
-	posX := newBitset()
-	posO := newBitset()
-	for ind, val := range input {
-		if val == "X" {
-			posX.SetBit(ind)
-		} else if val == "O" {
-			posO.SetBit(ind)
-		} else if val != "" {
-			return Invalid
-		}
+func (g *Game) Move(player string, x, y int) bool {
+	if player != "X" && player != "O" {
+		return false
 	}
-	fmt.Println(posX)
-	fmt.Println(posO)
+	index := x*g.boardSize + y
+	if player == "X" {
+		g.playerXHand.SetBit(index)
+	} else {
+		g.playerOHand.SetBit(index)
+	}
+	return true
+}
+
+func (g *Game) Solve() GameResultType {
+	fmt.Println(g.playerXHand)
+	fmt.Println(g.playerOHand)
 
 	// for a game to have a winner, either player must have at least n tries
 	// the difference between the two players cannot be > 1
-	if posX.ones < s.boardSize || posO.ones < s.boardSize {
+	if g.playerXHand.ones < g.boardSize || g.playerOHand.ones < g.boardSize {
 		return Incomplete
 	}
-	if abs(posX.ones, posO.ones) > 1 {
+	if abs(g.playerXHand.ones, g.playerOHand.ones) > 1 {
 		return Incomplete
 	}
-	return s.solveBitSet(posX, posO)
+	return g.solveBitSet()
 }
 
-func (s *GameSolver) solveBitSet(posX, posO *bitset) GameResultType {
+func (g *Game) FromInput(input []string) bool {
+	for ind, val := range input {
+		if val == "X" {
+			g.playerXHand.SetBit(ind)
+		} else if val == "O" {
+			g.playerOHand.SetBit(ind)
+		} else if val != "" {
+			return false
+		}
+	}
+	return true
+}
+
+func (g *Game) solveBitSet() GameResultType {
 	// for each player check if they win, and both cannot win
 	var winnerX, winnerO bool
-	for _, hand := range s.winningHands {
-		if hand.Matches(posX) {
+	for _, hand := range g.winningHands {
+		if hand.Matches(g.playerXHand) {
 			winnerX = true
-		} else if hand.Matches(posO) {
+		} else if hand.Matches(g.playerOHand) {
 			winnerO = true
 		}
 	}
