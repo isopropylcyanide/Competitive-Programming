@@ -111,14 +111,7 @@ int main() {
     }
 
 
-/**
-  Given a m-ary tree with N nodes numbered from 0 to N - 1, help find the sum of distances
-  between a given node and *every* other node
-*/
-
-
-
-/**
+    /**
 
                0
              / | \
@@ -126,10 +119,11 @@ int main() {
            / \
           2   1
 
-   From 0: dist(3) + dist(4) + dist(2) + dist(1) + dist(5) = 1 + 1 + 2 + 2 + 1 = 7
-   ...
-   From 1: dist(3) + dist(2) + dist(0) + dist(4) + dist(5) = 1 + 2 + 2 + 3 + 3 = 11
-*/
+    From 0: dist(3) + dist(4) + dist(2) + dist(1) + dist(5) = 1 + 1 + 2 + 2 + 1 = 7
+    ...
+    From 1: dist(3) + dist(2) + dist(0) + dist(4) + dist(5) = 1 + 2 + 2 + 3 + 3 = 11
+    */
+    
     std::cout << "\n*****************" << endl;
     reset();
     edges = {{0, 3},
