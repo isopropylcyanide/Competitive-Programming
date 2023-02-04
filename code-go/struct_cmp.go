@@ -2,10 +2,8 @@ package main
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/google/go-cmp/cmp/cmpopts"
 )
 
 type FareCalculate struct {
@@ -74,33 +72,55 @@ func main() {
 		},
 	}
 
-	cmpopts.IgnoreFields()
-	diff := cmp.Diff(structA, structB)
-	fmt.Println(diff)
+	var reporter DiffReporter
+	_ = cmp.Diff(structA, structB, cmp.Reporter(&reporter))
+	if len(reporter.diffs) != 0 {
+		for _, attr := range reporter.attrPaths {
+			fmt.Println(attr.value)
+			fmt.Println(attr.path)
+		}
+	}
 }
 
 // DiffReporter is a simple custom reporter that only records differences
 // detected during comparison.
 type DiffReporter struct {
-	path  cmp.Path
-	diffs []string
+	path      cmp.Path
+	attrPaths []attrPath
+	diffs     []diffPath
 }
 
-func (r *DiffReporter) PushStep(ps cmp.PathStep) {
-	r.path = append(r.path, ps)
+type attrPath struct {
+	path  string
+	value string
 }
 
-func (r *DiffReporter) Report(rs cmp.Result) {
+type diffPath struct {
+	path     string
+	expected string
+	actual   string
+}
+
+func (dr *DiffReporter) PushStep(ps cmp.PathStep) {
+	dr.path = append(dr.path, ps)
+}
+
+func (dr *DiffReporter) Report(rs cmp.Result) {
+	l, r := dr.path.Last().Values()
+	path := dr.path.GoString()
+	dr.attrPaths = append(dr.attrPaths, attrPath{
+		path:  path,
+		value: fmt.Sprintf("%v", l),
+	})
 	if !rs.Equal() {
-		vx, vy := r.path.Last().Values()
-		r.diffs = append(r.diffs, fmt.Sprintf("%#v:\n\t-: %+v\n\t+: %+v\n", r.path, vx, vy))
+		dr.diffs = append(dr.diffs, diffPath{
+			path:     path,
+			expected: fmt.Sprintf("%v", l),
+			actual:   fmt.Sprintf("%v", r),
+		})
 	}
 }
 
-func (r *DiffReporter) PopStep() {
-	r.path = r.path[:len(r.path)-1]
-}
-
-func (r *DiffReporter) String() string {
-	return strings.Join(r.diffs, "\n")
+func (dr *DiffReporter) PopStep() {
+	dr.path = dr.path[:len(dr.path)-1]
 }
